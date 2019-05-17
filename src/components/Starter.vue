@@ -58,13 +58,18 @@
         </div>
         <div v-else-if="researchnr === 1" class="conclusies" >
             <h1 class="text-xs-center hoofdvraag">Wat leuk dat je hier klikt, hier is alleen nog niks</h1>
-
-
+            <Research2></Research2>
+        </div>
+        <div v-else-if="researchnr === 2" class="conclusies" >
+            <h1 class="text-xs-center hoofdvraag">Wat leuk dat je hier klikt, hier is alleen nog niks</h1>
+            <Research3></Research3>
         </div>
     </div>
 </template>
 <script>
     import Research1 from './Research/Research1.vue'
+    import Research2 from './Research/Research2.vue'
+    import Research3 from './Research/Research3.vue'
 
 
     import kringel from "../assets/kringel.svg"
@@ -76,7 +81,7 @@
     import Code2 from "../assets/whiteCode.png"
     export default {
         components:{
-            Research1,
+            Research1, Research2, Research3
         },
 
         methods:{
@@ -130,9 +135,7 @@
         right: 0;
         font-weight: 300;
     }
-    .backgroundje {
-        background: blue;
-    }
+
     .text {
         position:relative;
     }

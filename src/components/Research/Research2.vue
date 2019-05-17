@@ -7,26 +7,30 @@
 
                 <p class="subvraagNummer">Subvraag 1</p>
                 <h3 class="subvraag">
-                    Waarom een prototype?
+                    Waarom een testomgeving?
                 </h3>
                 <p>
-                    Ik heb dit <span>eerste prototype</span> gemaakt om achter belangrijke <span>design keuzes</span> te
-                    komen voor hoe mijn uiteindelijke applicatie eruit komt te zien. Dit prototype
-                    is gemaakt met de insteek dat het een <span>'standalone app'</span> wordt. Hiermee heb
-                    ik dus geen rekening gehouden met een bestaande huisstijl van The Ce8ion.Lab.
+                    Aangezien deze opdracht vrij groot is, was het handig om de <span>functionaliteiten</span>
+                    in losse delen te maken, voordat ik het uiteindelijk samen voeg
+                    als één groot geheel. <br>
+                    Dit gaf mij ook gelijk de kans om bepaalde <span>libraries</span> uit testen, binnen in
+                    een vue-project. Door alles in één project te hebben is het gemakkelijker
+                    om later samen te voegen.
+                    Met deze <span>Proof Of Concept</span> kon ik ook kleine functionaliteiten <span>showcasen</span>
+                    aan de stakeholders, voordat ik deze dan samenvoeg. Op deze manier
+                    kan ik feedback verkrijgen voordat ik het samenvoeg.
+
                 </p>
 
-                <Kringel></Kringel>
+
                 <!--<dotted_line></dotted_line>-->
                 <v-layout wrap row>
                     <v-flex lg8 order-xs2 order-md2 order-lg1 >
-                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Bestaande data dashboards</span></h3>
+                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Charting library</span></h3>
                         <p class="onderzoekTekst" v-scroll-reveal>
-                            Ik heb een <span>best, good and worse practices</span> onderzoek gedaan naar bestaande data dashboards. Hier heb ik naar positieve
-                            en negatieve aspecten aan de bestaande dashboards gekeken, zo had ik een beter beeld van wat ik wel en niet moest toepassen bij mijn
-                            eigen oplossing. Door dit onderzoek heb ik een paar
-                            <span>functionaliteiten</span> en <span>design keuzes</span> kunnen vaststellen, ook heb ik conclusies kunnen gebruiken
-                            in het onderzoek over 'Uiterlijk van grafieken'. <br>
+                            <span>Grafieken</span> maken een groot deel van mijn opdracht uit, eerst met het visualiseren van data uit surveys, later uit Google Analytics data.
+                            Het is dus de taak om de beste library te kiezen voor mijn project. Na een <span>comparison chart</span> en <span>Proof Of Concepts</span> van verschillende
+                            libraries heb ik zelf wat conclusies kunnen trekken. Deze heb ik <span>gepresenteerd</span> aan de stakeholders en hieruit is de library 'eCharts' uit gekomen.
                             <i>{{info}}</i>
 
 
@@ -35,7 +39,7 @@
                     <v-flex lg4  order-sm1>
 
                         <div class="imageDiv" v-scroll-reveal>
-                          <img class="image" :src="Dashboard">
+                          <img class="image" :src="Chart">
                                 <div class="middle">
                                     <a href="http://i367471.hera.fhict.nl/stageFiles/dashboardresearch.pdf" target="_blank">
 
@@ -69,12 +73,14 @@
                     </div>
                     </v-flex>
                     <v-flex lg8>
-                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Uiterlijk van grafieken</span></h3>
+                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span> Vue-routing</span></h3>
                         <p class="onderzoekTekst" v-scroll-reveal>
-                            Na een <span>biebonderzoek</span> over het kiezen van het grafiektype en een daaropvolgend <span>biebonderzoek</span> over waar
-                            je op moet letten bij het visualiseren met data en het vaststellen van een <span>kleurenpalet</span> voor de grafieken. Heb ik een
-                            aantal conclusies kunnen trekken die ik kan gebruiken om de basis van de grafieken op te bouwen. Hoe de grafieken er uiteindelijk uit
-                            gaan zien is nog afhankelijk van de library en de data die ik aangeleverd krijg.
+                             De stakeholders en ik hadden een discussie over hoe we de routing moesten aanpakken in het uiteindelijke product. We konden namelijk de routing gebruiken
+                            die al in Elocus zit, of dit de plugin 'vue-router' laten doen. Ik heb dus een biebonderzoek gedaan naar vue-router en de voor- en nadelen hiervan. Hierbij
+                            heb ik ook deze functies getest op de testomgeving. Op deze manier wist ik ook of de voordelen wel gemakkelijk te implementeren zijn of niet.
+                            <br>
+                            Uit dit onderzoek is een voorstel uit voort gekomen dat we beter de routing van Elocus kunnen gebruiken.
+
                             <br><i>{{info}}</i>
 
 
@@ -86,7 +92,7 @@
                 <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
                 <v-layout wrap row>
                     <v-flex lg8 order-xs2 order-md2 order-lg1 >
-                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Bestaande survey tools</span></h3>
+                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Supporting libraries</span></h3>
                         <p class="onderzoekTekst" v-scroll-reveal>
                             Na een <span>best, good and worse practices,</span> en een presentatie waarbij mijn stagebegeleiders en opdrachtgever <span>co-reflectie</span>
                             hebben kunnen geven, ben ik tot een paar belangrijke keuzes gekomen voor mijn concept. Ik heb hier gekeken naar wat voor <span>functionaliteiten</span>
@@ -103,7 +109,7 @@
                     <v-flex lg4  order-sm1>
 
                         <div class="imageDiv" v-scroll-reveal>
-                            <img class="image" :src="Dashboard">
+                            <img class="image" :src="Plugin">
                             <div class="middle">
                                 <a href="http://i367471.hera.fhict.nl/stageFiles/dashboardresearch.pdf" target="_blank">
 
@@ -118,22 +124,52 @@
                         </div>
                     </v-flex>
                 </v-layout>
+                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down" v-scroll-reveal >
+                <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
+                <v-layout wrap row>
+                    <v-flex lg4 >
+                        <div class="imageDiv" v-scroll-reveal>
+                            <img class="image" :src="DonutChart">
+                            <div class="middle">
+                                <a href="http://i367471.hera.fhict.nl/stageFiles/graphbaseresearch.pdf" target="_blank">
+
+                                    <v-card class="hiddenText">
+
+                                        Bekijk onderzoek
+
+                                    </v-card>
+                                </a>
+                            </div>
+                        </div>
+                    </v-flex>
+                    <v-flex lg8>
+                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span> Google analytics</span></h3>
+                        <p class="onderzoekTekst" v-scroll-reveal>
+                            <span>Grafieken</span> maken een groot deel van mijn opdracht uit, eerst met het visualiseren van data uit surveys, later uit Google Analytics data.
+                            Het is dus de taak om de beste library te kiezen voor mijn project. Na een <span>comparison chart</span> en <span>Proof Of Concepts</span> van verschillende
+                            libraries heb ik zelf wat conclusies kunnen trekken. Deze heb ik <span>gepresenteerd</span> aan de stakeholders en hieruit is de library 'eCharts' uit gekomen.
+                            <br><i>{{info}}</i>
+
+
+                        </p>
+                    </v-flex>
+
+                </v-layout>
 
             </v-flex>
-
             <v-flex lg2 ></v-flex>
-
         </v-layout>
     </v-container>
 </template>
 
 <script>
     import Arrow from '../../assets/Arrow.svg'
-    import Dotted from '../../assets/dotted_line.svg'
-    import PieChart from '../../assets/pieChart.png'
-    import DonutChart from '../../assets/donutChart.jpg'
+    import dotted from '../../assets/dotted_line.svg'
+
     import Palet from '../../assets/colorpalette.png'
     import Dashboard from '../../assets/dashboard.jpg'
+    import Chart from '../../assets/lineChart.png'
+    import Plugin from '../../assets/vuePlugins.jpg'
 
 
 
@@ -144,9 +180,10 @@
             return {
                 info: "klik op de afbeelding om het onderzoek te lezen.",
                 Arrow: Arrow,
-                Dotted:Dotted,
-                PieChart: PieChart,
-                DonutChart: DonutChart,
+                Dotted: dotted,
+                Chart: Chart,
+                DonutChart: Chart,
+                Plugin: Plugin,
                 Palet: Palet,
                 Dashboard: Dashboard
                // onderzoek1: onderzoek1,
@@ -185,6 +222,7 @@ span {
 
 } .imageDiv:hover .image {
     opacity: 0.4;
+
   }
   .imageDiv:hover .middle {
       opacity: 1;
@@ -197,12 +235,13 @@ span {
 }
     .subvraagNummer {
         margin-bottom: -2px;
+
     }
     .subvraag {
         padding: 0;
     }
 .arrow {
-    width:80%;
+    width:70%;
     padding-top:2%;
     padding-bottom:2%;
     padding-left:26%
@@ -217,6 +256,7 @@ span {
     -ms-transform: translate(-50%, -50%);
     text-align: center;
 } a{
+
       text-decoration: none;
   }
 </style>

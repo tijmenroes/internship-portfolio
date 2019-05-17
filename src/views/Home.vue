@@ -22,8 +22,8 @@
     <div class="bigdiv">
       <h1 class="text-xs-center titel" ref="page1">Onderzoek </h1>
 
-      <starter :scrollPos="scrollPos"> </starter>
-      <Kringeltje :scrollPos="scrollPos"></Kringeltje>
+      <starter > </starter>
+      <Kringel ></Kringel>
       <!--Features pagina-->
       <v-container>
         <v-layout row wrap>
@@ -40,7 +40,7 @@
     </div>
     <div class="bigdiv greydiv">
 
-      <Kringeltje ></Kringeltje>
+      <Kringel ></Kringel>
     <h1 class="text-xs-center titel">Reflectie</h1>
 
       <reflectie></reflectie>
@@ -52,10 +52,10 @@
 
 <script>
 import OpdrachtDesc from '../components/OpdrachtDesc.vue'
-import Research from '../components/Research.vue'
+
 import Starter from '../components/Starter.vue'
 import kringel from "../assets/kringel.svg"
-import Kringeltje from '../components/Kringel.vue'
+
 import Cursor from '../assets/cursor.svg'
 import Reflectie from '../components/Reflectie.vue'
 import Features from '../components/Features.vue'
@@ -81,8 +81,8 @@ export default {
   components: {
     Starter,
     OpdrachtDesc,
-    Research,
-    Kringeltje, Reflectie,
+
+    Reflectie,
     Features
   },methods:{
     scrollTo(number){

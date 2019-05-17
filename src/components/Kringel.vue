@@ -9,7 +9,7 @@
 <script>
     import kringel from "../assets/kringel.svg"
     export default {
-        props: ['scrollPos'],
+
         name: "Kringel",
         data() {
             return {
