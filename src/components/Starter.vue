@@ -1,7 +1,5 @@
 <template>
     <div>
-
-
             <v-layout row>
                 <v-flex xs1 class="hidden-md-and-down"></v-flex>
                 <v-flex xs12>
@@ -57,11 +55,11 @@
             <Research1></Research1>
         </div>
         <div v-else-if="researchnr === 1" class="conclusies" >
-            <h1 class="text-xs-center hoofdvraag">Wat leuk dat je hier klikt, hier is alleen nog niks</h1>
+            <h1 class="text-xs-center hoofdvraag">Hoe kom ik erachter wat de juiste tools zijn?</h1>
             <Research2></Research2>
         </div>
         <div v-else-if="researchnr === 2" class="conclusies" >
-            <h1 class="text-xs-center hoofdvraag">Wat leuk dat je hier klikt, hier is alleen nog niks</h1>
+            <h1 class="text-xs-center hoofdvraag">Hoe verbeter ik mijn oude ontwerp?</h1>
             <Research3></Research3>
         </div>
     </div>

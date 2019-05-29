@@ -21,8 +21,12 @@
                     kan ik feedback verkrijgen voordat ik het samenvoeg.
 
                 </p>
+                <p>
 
+                    ========== Kopske met flowcharts nog ofwa?
+                </p>
 
+                <Kringel></Kringel>
                 <!--<dotted_line></dotted_line>-->
                 <v-layout wrap row>
                     <v-flex lg8 order-xs2 order-md2 order-lg1 >
@@ -54,7 +58,7 @@
                         </div>
                     </v-flex>
                 </v-layout>
-                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down" v-scroll-reveal >
+                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down flip" v-scroll-reveal >
                 <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
                 <v-layout wrap row>
                     <v-flex lg4 >
@@ -75,9 +79,9 @@
                     <v-flex lg8>
                         <h3 class="text-xs-center pa-3" v-scroll-reveal><span> Vue-routing</span></h3>
                         <p class="onderzoekTekst" v-scroll-reveal>
-                             De stakeholders en ik hadden een discussie over hoe we de routing moesten aanpakken in het uiteindelijke product. We konden namelijk de routing gebruiken
-                            die al in Elocus zit, of dit de plugin 'vue-router' laten doen. Ik heb dus een biebonderzoek gedaan naar vue-router en de voor- en nadelen hiervan. Hierbij
-                            heb ik ook deze functies getest op de testomgeving. Op deze manier wist ik ook of de voordelen wel gemakkelijk te implementeren zijn of niet.
+                             De stakeholders en ik hadden een discussie over hoe we de <span>routing</span> moesten aanpakken in het uiteindelijke product. We konden namelijk de routing gebruiken
+                            die al in Elocus zit, of dit de plugin 'vue-router' laten doen. Ik heb dus een <span>literatuuronderzoek</span> gedaan naar vue-router en de voor- en nadelen hiervan. Hierbij
+                            heb ik ook deze functies <span>getest</span> op de testomgeving. Op deze manier kon ik namelijk zien of de voordelen wel gemakkelijk te implementeren zijn of niet.
                             <br>
                             Uit dit onderzoek is een voorstel uit voort gekomen dat we beter de routing van Elocus kunnen gebruiken.
 
@@ -124,12 +128,12 @@
                         </div>
                     </v-flex>
                 </v-layout>
-                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down" v-scroll-reveal >
+                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down flip" v-scroll-reveal >
                 <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
                 <v-layout wrap row>
                     <v-flex lg4 >
                         <div class="imageDiv" v-scroll-reveal>
-                            <img class="image" :src="DonutChart">
+                            <img class="image" :src="galogo">
                             <div class="middle">
                                 <a href="http://i367471.hera.fhict.nl/stageFiles/graphbaseresearch.pdf" target="_blank">
 
@@ -145,9 +149,11 @@
                     <v-flex lg8>
                         <h3 class="text-xs-center pa-3" v-scroll-reveal><span> Google analytics</span></h3>
                         <p class="onderzoekTekst" v-scroll-reveal>
-                            <span>Grafieken</span> maken een groot deel van mijn opdracht uit, eerst met het visualiseren van data uit surveys, later uit Google Analytics data.
-                            Het is dus de taak om de beste library te kiezen voor mijn project. Na een <span>comparison chart</span> en <span>Proof Of Concepts</span> van verschillende
-                            libraries heb ik zelf wat conclusies kunnen trekken. Deze heb ik <span>gepresenteerd</span> aan de stakeholders en hieruit is de library 'eCharts' uit gekomen.
+                            Aangezien ik al grafieken had kunnen maken, waar de gebruiker ook wat aanpassingen op kon doen. Leek het ons een goede <span>uitbreiding</span> om dit ook met
+                            <span>Google Analytics </span> data te kunnen. Daarom heb ik eerst een onderzoek gedaan naar wat data goed is om te displayen. Aangezien elke klant van The
+                            Cre8ion.Lab anders is, is mij gevraagd om de data een beetje globaal te houden, zo kon elke klant er gebruik van maken.
+                            <br>
+                            Nadat bekend was wat voor data gevisualiseerd moest gaan worden, kon ik aan de slag met het <span>testen</span> hiervan op de testomgeving.
                             <br><i>{{info}}</i>
 
 
@@ -166,6 +172,7 @@
     import Arrow from '../../assets/Arrow.svg'
     import dotted from '../../assets/dotted_line.svg'
 
+    import galogo from '../../assets/galogoo.png'
     import Palet from '../../assets/colorpalette.png'
     import Dashboard from '../../assets/dashboard.jpg'
     import Chart from '../../assets/lineChart.png'
@@ -185,6 +192,7 @@
                 DonutChart: Chart,
                 Plugin: Plugin,
                 Palet: Palet,
+                galogo: galogo,
                 Dashboard: Dashboard
                // onderzoek1: onderzoek1,
 
@@ -194,68 +202,24 @@
 </script>
 
 <style scoped>
+    .hiddenText {
+        background-color: #FF4C42;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        padding: 16px 32px;
+    }
+    .hiddenText:hover{
+        background-color: #a53029;
+    }
 span {
     color: #FF4C42;
     font-weight: 600;
 
 }
-.image {
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
-    margin: auto;
-    backface-visibility: hidden;
-}
-@media only screen and (max-width: 1263px)  {
-    .image {
-        width: 30%;
-    }
-}
-.imageDiv{
-    /*border: 1px solid black;*/
-    width:80%;
-    height: 80%;
-    margin:auto;
-    position:relative;
 
-} .imageDiv:hover .image {
-    opacity: 0.4;
-
-  }
-  .imageDiv:hover .middle {
-      opacity: 1;
-  }
-.hiddenText {
-    background-color: #FF4C42;
-    color: white;
-    font-size: 16px;
-    padding: 16px 32px;
-}
-    .subvraagNummer {
-        margin-bottom: -2px;
-
-    }
-    .subvraag {
-        padding: 0;
-    }
-.arrow {
-    width:70%;
-    padding-top:2%;
-    padding-bottom:2%;
-    padding-left:26%
-}
-.middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-} a{
+ a{
 
       text-decoration: none;
   }

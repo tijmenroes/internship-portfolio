@@ -36,7 +36,9 @@
                         this.width = '0%'
                     }
         })
-    }
+    }, destroyed(){
+            console.log('WOWWWWMAN');
+        }
     }
 </script>
 

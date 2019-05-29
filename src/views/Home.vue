@@ -9,7 +9,7 @@
       </ul>
     </div>
     <!--<div class="bigdiv" >-->
-
+Landingpage
  <!--sdfssdfs-->
 
       <!--<Kringeltje :scrollPos="scrollPos"></Kringeltje>-->

@@ -25,6 +25,9 @@
         </v-layout>
     </v-container>
     </div>
+        <div class="schuin">
+
+        </div>
         <v-container fluid grid-list-md class="AanpakDiv">
             <v-layout row wrap>
                 <v-flex xs12 md1>
@@ -75,17 +78,14 @@
 .OpdrachtDiv {
     background-color: #ff4c42;
     min-height: 300px;
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 73%);
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 73%);
-}
 
-.imgdiv {
-    /* background: black; */
-    Border: 1px solid black;
-    height: 250px;
 }
-.svgimg {
+.schuin {
 
+    min-height: 50px;
+    background-color: #ff4c42;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 3%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 3%);
 }
     .descTitel {
         font-size: 65px;

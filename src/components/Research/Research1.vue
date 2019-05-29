@@ -50,7 +50,7 @@
                         </div>
                     </v-flex>
                 </v-layout>
-                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down" v-scroll-reveal >
+                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down flip" v-scroll-reveal >
                 <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
                 <v-layout wrap row>
                     <v-flex lg4 >
@@ -119,6 +119,72 @@
                     </v-flex>
                 </v-layout>
 
+                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down flip" v-scroll-reveal >
+                <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
+
+                <v-layout wrap row>
+                    <v-flex lg4 >
+                        <div class="imageDiv" v-scroll-reveal>
+                            <img class="image" :src="Proto1">
+                            <div class="middle">
+                                <a href="http://i367471.hera.fhict.nl/stageFiles/graphbaseresearch.pdf" target="_blank">
+
+                                    <v-card class="hiddenText">
+
+                                        Bekijk onderzoek
+
+                                    </v-card>
+                                </a>
+                            </div>
+                        </div>
+                    </v-flex>
+                    <v-flex lg8>
+                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Ontwerpfase</span></h3>
+                        <p class="onderzoekTekst" v-scroll-reveal>
+                            Na alle onderzoeken had ik al een goed beeld van wat ik wou maken. Ik heb besloten hier <span>schetsen</span> van te maken, hierna heb ik digitale ontwerpen gemaakt in Photoshop. Na hier <span>feedback</span> over gevraagd te hebben, kreeg ik het advies om Adobe XD te gebruiken voor een prototype. Daar ben ik
+                            mee aan de slag gegaan. Het <span>clickable prototype</span> dat hieruit kwam is <a href="https://xd.adobe.com/view/b4490747-9eb8-4ff4-6bf1-f0d0a0f73453-c278/?fullscreen">hier</a> te vinden.
+                            <br><i>klik op de afbeelding om het proces te bekijken</i>
+
+
+                        </p>
+                    </v-flex>
+
+                </v-layout>
+
+                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down" v-scroll-reveal >
+                <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
+
+                <v-layout wrap row>
+                    <v-flex lg4 >
+                        <div class="imageDiv" v-scroll-reveal>
+                            <img class="image" :src="Proto1">
+                            <div class="middle">
+                                <a href="https://xd.adobe.com/view/b4490747-9eb8-4ff4-6bf1-f0d0a0f73453-c278/?fullscreen" target="_blank">
+
+                                    <v-card class="hiddenText">
+
+                                        Bekijk Prototype
+
+                                    </v-card>
+                                </a>
+                            </div>
+                        </div>
+                    </v-flex>
+                    <v-flex lg8>
+                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Prototype</span></h3>
+                        <p class="onderzoekTekst" v-scroll-reveal>
+                           Na over alles <span>feedback</span> gekregen te hebben, kreeg ik het advies om Adobe XD te gebruiken voor een prototype. Daar ben ik
+                            mee aan de slag gegaan. Hieruit is een <span>clickable prototype </span>gekomen waarin ik een aantal <span>a/b testjes</span> doe met het menu en de stijl. Ook hoopte ik met
+                            dit prototype een duidelijker beeld te krijgen over wat wel en niet duidelijk is van het ontwerp. Door het te testen op mensen die wat verstand hadden
+                            van front-end development en grafisch design, hoopte ik ook extra feedback te krijgen over het ontwerp.
+
+                            <br><i>klik op de afbeelding om het prototype te bekijken</i>
+
+
+                        </p>
+                    </v-flex>
+
+                </v-layout>
             </v-flex>
 
             <v-flex lg2 ></v-flex>
@@ -134,6 +200,7 @@
     import DonutChart from '../../assets/donutChart.jpg'
     import Palet from '../../assets/colorpalette.png'
     import Dashboard from '../../assets/dashboard.jpg'
+    import Proto1 from '../../assets/proto1.jpg'
 
 
 
@@ -148,75 +215,99 @@
                 PieChart: PieChart,
                 DonutChart: DonutChart,
                 Palet: Palet,
-                Dashboard: Dashboard
+                Dashboard: Dashboard,
+                Proto1: Proto1,
                // onderzoek1: onderzoek1,
 
             }
         }
     }
 </script>
-
-<style scoped>
-span {
-    color: #FF4C42;
-    font-weight: 600;
-
-}
-.image {
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
-    margin: auto;
-    backface-visibility: hidden;
-}
-@media only screen and (max-width: 1263px)  {
-    .image {
-        width: 30%;
+<style>
+    .flip{
+        -moz-transform: scaleX(-1) !important;
+        -o-transform: scaleX(-1) !important;;
+        -webkit-transform: scaleX(-1) !important;;
+        transform: scaleX(-1) !important;;
+        filter: FlipH;
+        padding-left: 0% !important;
+        padding-right: 26%;
+        -ms-filter: "FlipH";
     }
-}
-.imageDiv{
-    /*border: 1px solid black;*/
-    width:80%;
-    height: 80%;
-    margin:auto;
-    position:relative;
+    .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        margin: auto;
+        backface-visibility: hidden;
+    }
+    @media only screen and (max-width: 1263px)  {
+        .image {
+            width: 30%;
+        }
+    }
+    .imageDiv{
+        /*border: 1px solid black;*/
+        width:80%;
+        height: 80%;
+        margin:auto;
+        position:relative;
 
-} .imageDiv:hover .image {
-    opacity: 0.4;
-  }
-  .imageDiv:hover .middle {
-      opacity: 1;
-  }
-.hiddenText {
-    background-color: #FF4C42;
-    color: white;
-    font-size: 16px;
-    padding: 16px 32px;
-}
+    } .imageDiv:hover .image {
+          opacity: 0.4;
+      }
+    .imageDiv:hover .middle {
+        opacity: 1;
+    }
+    .hiddenText {
+        background-color: #FF4C42;
+        color: white;
+        font-size: 16px;
+        padding: 16px 32px;
+    }
     .subvraagNummer {
         margin-bottom: -2px;
     }
     .subvraag {
         padding: 0;
     }
-.arrow {
-    width:80%;
-    padding-top:2%;
-    padding-bottom:2%;
-    padding-left:26%
+    .arrow {
+        width:70%;
+        /*padding-top:2%;*/
+        /*padding-bottom:2%;*/
+        padding-left:26%
+    }
+    .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+</style>
+<style scoped>
+
+span {
+    color: #FF4C42;
+    font-weight: 600;
 }
-.middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-} a{
+ a{
       text-decoration: none;
   }
+.hiddenText {
+    background-color: #FF4C42;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 16px 32px;
+}
+.hiddenText:hover{
+    background-color: #a53029;
+}
 </style>

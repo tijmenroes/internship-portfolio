@@ -7,54 +7,45 @@
 
                 <p class="subvraagNummer">Subvraag 1</p>
                 <h3 class="subvraag">
-                    Waarom een testomgeving?
+                    Waarom een tweede prototype?
                 </h3>
                 <p>
-                    Aangezien deze opdracht vrij groot is, was het handig om de <span>functionaliteiten</span>
-                    in losse delen te maken, voordat ik het uiteindelijk samen voeg
-                    als één groot geheel. <br>
-                    Dit gaf mij ook gelijk de kans om bepaalde <span>libraries</span> uit testen, binnen in
-                    een vue-project. Door alles in één project te hebben is het gemakkelijker
-                    om later samen te voegen.
-                    Met deze <span>Proof Of Concept</span> kon ik ook kleine functionaliteiten <span>showcasen</span>
-                    aan de stakeholders, voordat ik deze dan samenvoeg. Op deze manier
-                    kan ik feedback verkrijgen voordat ik het samenvoeg.
-
+                    Na het <span>eerste prototype</span> was er nog heel wat werk aan de winkel. Hieruit bleek bijvoorbeeld dat de filter functie
+                    te lastig was voor de gebruikers, deze zou dus veranderd moeten worden. Ook is de hele stijl omgegooid, het werd namelijk toch geen
+                    <span>standalone</span> applicatie. Genoeg redenen om nog een prototype te maken dus.
+                </p>
+                <p>
+                    Hieronder kan je het proces bekijken hoe ik van de eerste stijl en eerste prototype ben gegaan naar een tweede versie van het prototype, dit is ook
+                    de versie die uiteindelijk gebruikt word in Elocus.
                 </p>
 
 
-                <dotted_line></dotted_line>
+                <Kringel></Kringel>
                 <v-layout wrap row>
                     <v-flex lg8 order-xs2 order-md2 order-lg1 >
-                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Charting library</span></h3>
+                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Usertests prototype 1</span></h3>
                         <p class="onderzoekTekst" v-scroll-reveal>
-                            <span>Grafieken</span> maken een groot deel van mijn opdracht uit, eerst met het visualiseren van data uit surveys, later uit Google Analytics data.
-                            Het is dus de taak om de beste library te kiezen voor mijn project. Na een <span>comparison chart</span> en <span>Proof Of Concepts</span> van verschillende
-                            libraries heb ik zelf wat conclusies kunnen trekken. Deze heb ik <span>gepresenteerd</span> aan de stakeholders en hieruit is de library 'eCharts' uit gekomen.
+                            De <span>usertests</span> van het eerste prototype heb ik erg goed kunnen gebruiken bij het maken van het tweede prototype 2.
+                            Er komen hierin namelijk een aantal problemen en oplossingen naar boven, die ik vervolgens kan toepassen in het ontwerp van het
+                            tweede prototype.
                             <i>{{info}}</i>
-
 
                         </p>
                     </v-flex>
                     <v-flex lg4  order-sm1>
-
                         <div class="imageDiv" v-scroll-reveal>
                           <img class="image" :src="Chart">
                                 <div class="middle">
-                                    <a href="http://i367471.hera.fhict.nl/stageFiles/dashboardresearch.pdf" target="_blank">
-
+                                    <a href="http://i367471.hera.fhict.nl/stageFiles/testdocument1.pdf" target="_blank">
                                         <v-card class="hiddenText">
-
-                                            Bekijk onderzoek
-
+                                            Bekijk testdocument
                                     </v-card>
                                     </a>
                                 </div>
-
                         </div>
                     </v-flex>
                 </v-layout>
-                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down" v-scroll-reveal >
+                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down flip" v-scroll-reveal >
                 <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
                 <v-layout wrap row>
                     <v-flex lg4 >
@@ -65,7 +56,7 @@
 
                                 <v-card class="hiddenText">
 
-                                    Bekijk onderzoek
+                                    Bekijk onderzoeksproces
 
                                 </v-card>
                             </a>
@@ -73,23 +64,20 @@
                     </div>
                     </v-flex>
                     <v-flex lg8>
-                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span> Vue-routing</span></h3>
+                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span> Vernieuwd kleurenpalet</span></h3>
                         <p class="onderzoekTekst" v-scroll-reveal>
                             <span>Grafieken</span> maken een groot deel van mijn opdracht uit, eerst met het visualiseren van data uit surveys, later uit Google Analytics data.
                             Het is dus de taak om de beste library te kiezen voor mijn project. Na een <span>comparison chart</span> en <span>Proof Of Concepts</span> van verschillende
                             libraries heb ik zelf wat conclusies kunnen trekken. Deze heb ik <span>gepresenteerd</span> aan de stakeholders en hieruit is de library 'eCharts' uit gekomen.
                             <br><i>{{info}}</i>
-
-
                         </p>
                     </v-flex>
-
                 </v-layout>
                 <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down" v-scroll-reveal >
                 <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
                 <v-layout wrap row>
                     <v-flex lg8 order-xs2 order-md2 order-lg1 >
-                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Supporting libraries</span></h3>
+                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Usertests prototype 2</span></h3>
                         <p class="onderzoekTekst" v-scroll-reveal>
                             Na een <span>best, good and worse practices,</span> en een presentatie waarbij mijn stagebegeleiders en opdrachtgever <span>co-reflectie</span>
                             hebben kunnen geven, ben ik tot een paar belangrijke keuzes gekomen voor mijn concept. Ik heb hier gekeken naar wat voor <span>functionaliteiten</span>
@@ -104,16 +92,12 @@
                         </p>
                     </v-flex>
                     <v-flex lg4  order-sm1>
-
                         <div class="imageDiv" v-scroll-reveal>
                             <img class="image" :src="Plugin">
                             <div class="middle">
-                                <a href="http://i367471.hera.fhict.nl/stageFiles/dashboardresearch.pdf" target="_blank">
-
+                                <a href="http://i367471.hera.fhict.nl/stageFiles/testdocument2.pdf" target="_blank">
                                     <v-card class="hiddenText">
-
-                                        Bekijk onderzoek
-
+                                        Bekijk testdocument
                                     </v-card>
                                 </a>
                             </div>
@@ -121,7 +105,7 @@
                         </div>
                     </v-flex>
                 </v-layout>
-                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down" v-scroll-reveal >
+                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down flip" v-scroll-reveal >
                 <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
                 <v-layout wrap row>
                     <v-flex lg4 >
@@ -183,7 +167,6 @@
                 Plugin: Plugin,
                 Palet: Palet,
                 Dashboard: Dashboard
-               // onderzoek1: onderzoek1,
 
             }
         }
@@ -196,63 +179,18 @@ span {
     font-weight: 600;
 
 }
-.image {
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
-    margin: auto;
-    backface-visibility: hidden;
-}
-@media only screen and (max-width: 1263px)  {
-    .image {
-        width: 30%;
-    }
-}
-.imageDiv{
-    /*border: 1px solid black;*/
-    width:80%;
-    height: 80%;
-    margin:auto;
-    position:relative;
-
-} .imageDiv:hover .image {
-    opacity: 0.4;
-
-  }
-  .imageDiv:hover .middle {
-      opacity: 1;
-  }
 .hiddenText {
     background-color: #FF4C42;
     color: white;
     font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     padding: 16px 32px;
 }
-    .subvraagNummer {
-        margin-bottom: -2px;
-
-    }
-    .subvraag {
-        padding: 0;
-    }
-.arrow {
-    width:70%;
-    padding-top:2%;
-    padding-bottom:2%;
-    padding-left:26%
+.hiddenText:hover{
+    background-color: #a53029;
 }
-.middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-} a{
+a{
 
       text-decoration: none;
   }
