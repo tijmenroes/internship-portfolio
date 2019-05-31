@@ -8,13 +8,22 @@
         <li> <div class="menuItem" @click="scrollTo(4)" :style="{background: menuItems[3]}"></div></li>
       </ul>
     </div>
-    <!--<div class="bigdiv" >-->
-Landingpage
- <!--sdfssdfs-->
+    <div class="bigdiv covered" :style="{backgroundImage: 'url(' + Background + ')'}" >
 
-      <!--<Kringeltje :scrollPos="scrollPos"></Kringeltje>-->
-
-    <!--</div>-->
+      <v-container fill-height style="min-height: 1000px">
+        <v-layout row wrap align-center>
+           <v-flex md6>
+              <h1 class="superTitel">Reporting</h1>
+             <p>
+               Een reporting tool die ik heb gemaakt voor mijn stage opdracht bij TheCre8ion.Lab. Op deze site is mijn proces naar het eindproduct te zien.
+             </p>
+           </v-flex>
+          <v-flex md6>
+              <img :src="mockup" alt="" style="width: 75%">
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </div>
 
     <span ref="page2"></span>
     <!--Opdracht omschrijving en aanpak-->
@@ -55,18 +64,24 @@ import OpdrachtDesc from '../components/OpdrachtDesc.vue'
 
 import Starter from '../components/Starter.vue'
 import kringel from "../assets/kringel.svg"
+import mockup from "../assets/mockups.png"
 
+
+import Background from '../assets/achtergrondske.jpg'
 import Cursor from '../assets/cursor.svg'
 import Reflectie from '../components/Reflectie.vue'
 import Features from '../components/Features.vue'
 
+
 export default {
  data(){
    return {
+     Background: Background,
      width: '100%',
      kringel: kringel,
      cursor: 'url(' + Cursor + ')',
      cursorlit: Cursor,
+     mockup: mockup,
      scrollPos: 0,
      menuItems: ['red','white','white', 'white'],
      location: 0,
@@ -146,6 +161,10 @@ export default {
 </script>
 
 <style scoped>
+    .superTitel {
+        font-size: 48px;
+        font-weight: bold;
+    }
 .titel {
   font-weight: bold;
   color: #FF4C42;
@@ -153,6 +172,9 @@ export default {
 .bigdiv {
     min-height: 1000px;
     background: white;
+}
+.covered {
+    background-size: cover;
 }
 .menu {
   position: fixed;
