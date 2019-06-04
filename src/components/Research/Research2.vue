@@ -4,8 +4,6 @@
 
             <v-flex lg2 ></v-flex>
             <v-flex xs10 lg8>
-
-                <p class="subvraagNummer">Subvraag 1</p>
                 <h3 class="subvraag">
                     Waarom een testomgeving?
                 </h3>
@@ -64,7 +62,7 @@
                     <div class="imageDiv" v-scroll-reveal>
                         <img class="image" :src="DonutChart">
                         <div class="middle">
-                            <a href="http://i367471.hera.fhict.nl/stageFiles/graphbaseresearch.pdf" target="_blank">
+                            <a href="http://i367471.hera.fhict.nl/stageFiles/vuerouter_research.pdf" target="_blank">
 
                                 <v-card class="hiddenText">
 

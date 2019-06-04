@@ -40,7 +40,7 @@ export default {
 }
 h1 {
   font-weight: 400;
-  font-size: 4vw;
+  font-size: 2.5vw;
     letter-spacing: -0.13rem;
 }
 h1 span {

@@ -1,28 +1,30 @@
 <template>
     <div class="fulldiv">
+        <div class="schuin2">
+        </div>
     <div class="OpdrachtDiv">
 
     <v-container fluid grid-list-md>
         <v-layout row wrap>
             <v-flex xs12 md1>
             </v-flex>
+
                <v-flex xs12 md5 pa-3 v-scroll-reveal>
+
                    <h1 class="descTitel mt-5 text-xs-center">De opdracht</h1>
                </v-flex>
             <v-flex xs12 md4 pa-3 v-scroll-reveal>
-                    <p> 
-                        Tijdens mijn stage periode bij The Cre8ion.Lab heb ik de opdracht gekregen om een analyse tool te maken voor data
-                        uit ingevulde formulieren. Vergelijkbare voorbeelden hiermee zijn Google forms of SurveyMonkey.
+                    <p>
+                        The Cre8ion.Lab heeft al een applicatie die het mogelijk maakt om formulieren op te stellen en in te vullen. Nu hebben zij aan mij de opdracht gegeven om een tool te maken die de output van deze formulieren visualiseert. Dat zouden zij graag in een dashboard vorm zien.
                     </p>
                 <p>
-                    De data kwam in mijn geval uit een al bestaande API.
+                    Tijdens het realiseren van deze tool wil ik een vraag vinden op de onderzoeksvraag “Wat is de juiste manier van het visualiseren van de binnenkomende data en wat voor functionaliteiten heeft de gebruiker nodig?“.
                 </p>
-
-
-
+                <p>
+                    Het is mijn doel om een eindproduct te maken met de benodigde functies, dat sneller werkt dan bekende concurrenten "SurveyMonkey" en "Survio".
+                </p>
             </v-flex>
-              
-        </v-layout>
+          </v-layout>
     </v-container>
     </div>
         <div class="schuin">
@@ -81,11 +83,16 @@
 
 }
 .schuin {
-
     min-height: 50px;
     background-color: #ff4c42;
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 3%);
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 3%);
+}
+.schuin2 {
+    /*min-height: 10px;*/
+    /*background-color: #ff4c42;*/
+    /*-webkit-clip-path: polygon(0 0, 3% 0%, 100% 100%, 0 100%);*/
+    /*clip-path: polygon(0 0, 2% 0%, 100% 100%, 0 100%);*/
 }
     .descTitel {
         font-size: 65px;

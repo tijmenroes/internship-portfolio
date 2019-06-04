@@ -26,7 +26,7 @@
                                                     {{item.subtext}}
                                                 </p>
                                                 <v-btn depressed flat small class="button text-none text-xs-right">
-                                                Bekijk conclusies
+                                                Bekijk het proces
                                                 <v-icon class="icoon">
                                                     arrow_right_alt
                                                 </v-icon>
@@ -78,14 +78,20 @@
     import Code1 from "../assets/redCode.png"
     import Code2 from "../assets/whiteCode.png"
     export default {
+        props: ["researchnr"],
         components:{
             Research1, Research2, Research3
         },
-
+        watch: {
+            researchnr(){
+              console.log('yikes');
+                this.$vuetify.goTo(this.$refs.research, this.options);
+          }
+        },
         methods:{
             showResearch(index){
                 this.researchnr = index;
-                this.$vuetify.goTo(this.$refs.research, this.options);
+                // this.$vuetify.goTo(this.$refs.research, this.options);
             },
             changeImg(index){
                 this.cards[index].src = this.cards[index].image[1];
@@ -97,7 +103,6 @@
 
         data() {
             return {
-                zweer: 'nee',
                 lolWidth: '400px',
                 width: '100%',
                 kringel: kringel,
@@ -110,14 +115,14 @@
                     easing: 'easeInOutCubic',
                 }],
                 expand: false,
-                researchnr: -1,
+                // researchnr: -1,
                 cards: [
-                    {hoofdtitel:'Proto', titel: 'type 1', subtext: 'hoe moet ik data gaan visualiseren?', path: '/research',
+                    {hoofdtitel:'Proto', titel: 'type 1', subtext: 'Onderzoeken en informatie opdoen om tot een prototype te komen', path: '/research',
                         image: [image2, image], src: image2, iconColor: '#ff4c42'},
-                    {hoofdtitel:'Vue', titel: ' Testomgeving', subtext: 'hoe moet het...?', path: '/research',
-                        image: [Design1, Design2], src: Design1},
-                    {hoofdtitel:'Proto', titel: 'type 2', subtext: 'hoe moet het...?', path: '/research',
+                    {hoofdtitel:'Vue', titel: ' Testomgeving', subtext: 'Testomgeving om erachter te komen wat voor technische benodigheden nodig zijn', path: '/research',
                         image: [Code1, Code2], src: Code1},
+                    {hoofdtitel:'Eind', titel: 'product', subtext: 'Het implementeren van eerdere conclusies tot een laatste prototype en eindproduct', path: '/research',
+                        image: [Design1, Design2], src: Design1},
                 ]
             }
         },

@@ -8,37 +8,50 @@
         <li> <div class="menuItem" @click="scrollTo(4)" :style="{background: menuItems[3]}"></div></li>
       </ul>
     </div>
-    <div class="bigdiv covered" :style="{backgroundImage: 'url(' + Background + ')'}" >
-
-      <v-container fill-height style="min-height: 1000px">
+    <div class="lgdiv" >
         <v-layout row wrap align-center>
-           <v-flex md6>
-              <h1 class="superTitel">Reporting</h1>
+          <v-flex md0 lg1></v-flex>
+           <v-flex sm12 md6 lg5 pr-4 pt-4 shrink>
+             <v-container>
+              <h1 class="superTitel" ref="page1">Reporting</h1>
              <p>
-               Een reporting tool die ik heb gemaakt voor mijn stage opdracht bij TheCre8ion.Lab. Op deze site is mijn proces naar het eindproduct te zien.
+               Tijdens mijn stage periode bij The Cre8ion.Lab, heb ik een reporting tool ontwikkeld die data uit formulieren visualiseert. Op deze manier wordt de data niet simpelweg
+               als een lijst gedisplayd, maar worden ze ook omgezet naar grafieken. Op deze manier heeft de gebruiker meteen een overzicht van de data.
+               <br>
+               <a @click="testeroonie" >
+                 <v-card class="hiddenText">
+                   Bekijk Leeswijzer
+                 </v-card>
+               </a>
              </p>
+             </v-container>
            </v-flex>
-          <v-flex md6>
-              <img :src="mockup" alt="" style="width: 75%">
+          <v-flex sm12 md6 style="min-height: 500px" class="hidden-sm-and-down ">
+
+
+
+            <v-container>
+              <img :src="mockup" alt="Bekijk Demo" style="width: 65%; left: 10%; position: relative; top: 100px;" >
+            </v-container>
+
           </v-flex>
         </v-layout>
-      </v-container>
+
     </div>
 
     <span ref="page2"></span>
     <!--Opdracht omschrijving en aanpak-->
       <OpdrachtDesc></OpdrachtDesc>
     <div class="bigdiv">
-      <h1 class="text-xs-center titel" ref="page1">Onderzoek </h1>
-
-      <starter > </starter>
+      <h1 class="text-xs-center titel" ref="page3">Onderzoek </h1>
+      <starter :researchnr="researchnr"> </starter>
       <Kringel ></Kringel>
       <!--Features pagina-->
       <v-container>
         <v-layout row wrap>
           <v-flex xs1></v-flex>
           <v-flex xs10>
-            <h1 class="text-xs-center titel" ref="page3">Eindproduct</h1>
+            <h1 class="text-xs-center titel" ref="page4">Eindproduct</h1>
             <features></features>
           </v-flex>
 
@@ -67,6 +80,7 @@ import kringel from "../assets/kringel.svg"
 import mockup from "../assets/mockups.png"
 
 
+
 import Background from '../assets/achtergrondske.jpg'
 import Cursor from '../assets/cursor.svg'
 import Reflectie from '../components/Reflectie.vue'
@@ -77,6 +91,8 @@ export default {
  data(){
    return {
      Background: Background,
+
+     researchnr: -1,
      width: '100%',
      kringel: kringel,
      cursor: 'url(' + Cursor + ')',
@@ -100,6 +116,10 @@ export default {
     Reflectie,
     Features
   },methods:{
+    testeroonie(){
+      console.log(this.$route.params.id);
+
+    },
     scrollTo(number){
       if(number === 1){
         this.$vuetify.goTo(this.$refs.page1, this.options);
@@ -123,21 +143,21 @@ export default {
       var page2 = this.$refs.page2;
       var page1 = this.$refs.page1;
       var page3 = this.$refs.page3;
-      //
-      // console.log(page2.offsetTop + page2.offsetHeight );
-      // console.log(page3.offsetTop + page3.offsetHeight -100);
+      var page4 = this.$refs.page4;
+
       if(this.scrollPos > page1.offsetTop + page1.offsetHeight  && this.scrollPos < page2.offsetTop + page2.offsetHeight -300 ) {
         this.location = 0;
       }
       else if(this.scrollPos > page2.offsetTop -300 + page2.offsetHeight && this.scrollPos < page3.offsetTop + page3.offsetHeight -300) {
         this.location = 1;
-      } else if(this.scrollPos > page3.offsetTop + page3.offsetHeight -300) {
+      } else if(this.scrollPos > page3.offsetTop + page3.offsetHeight -300 && this.scrollPos < page4.offsetTop + page4.offsetHeight -300) {
         this.location = 2;
+      }  else if(this.scrollPos > page4.offsetTop + page4.offsetHeight -300 ) {
+        this.location = 3;
       }
     },
     changeMenu(index){
   console.log(index);
-  // this.menuItems = [];
       this.menuItems =  ['white', 'white', 'white', 'white'];
 
   console.log(this.menuItems);
@@ -150,6 +170,22 @@ export default {
      this.changeMenu(this.location);
    },
 
+  },
+  mounted(){
+    const param =  this.$route.params.id;
+    console.log(param);
+    if(param === "research"){
+      this.scrollTo(3);
+    } else if(param === "research1"){
+      this.scrollTo(3);
+      this.researchnr = 0;
+    } else if(param === "research2"){
+      this.scrollTo(3);
+      this.researchnr = 1;
+    } else if(param === "research3"){
+      this.scrollTo(3);
+      this.researchnr = 2;
+    }
   },
   beforeMount(){
     window.addEventListener('scroll', this.handleScroll);
@@ -164,6 +200,15 @@ export default {
     .superTitel {
         font-size: 48px;
         font-weight: bold;
+      color: #FF4C42;
+    }
+    .hiddenText{
+      background-color: #FF4C42;
+      color: white;
+      display: inline-block;
+      font-size: 16px;
+      margin: 5% 30%;
+      padding: 10px 20px;
     }
 .titel {
   font-weight: bold;
@@ -173,8 +218,11 @@ export default {
     min-height: 1000px;
     background: white;
 }
-.covered {
-    background-size: cover;
+.lgdiv {
+  min-height: 500px;
+}
+.frontpager {
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 3%);
 }
 .menu {
   position: fixed;
@@ -215,9 +263,6 @@ export default {
     box-shadow: 0px 6px 18px 2px rgba(0,0,0,0.24);
   }
 
-  .home {
-      /*cursor: url('../assets/cursor.svg')*/
-  }
   .greydiv {
     background-color: #F9F9F9;
   }

@@ -5,15 +5,21 @@
             <v-flex lg2 ></v-flex>
             <v-flex xs10 lg8>
 
-                <p class="subvraagNummer">Subvraag 1</p>
                 <h3 class="subvraag">
                     Waarom een prototype?
                 </h3>
+
+                <p>
+
+                </p>
                 <p>
                     Ik heb dit <span>eerste prototype</span> gemaakt om achter belangrijke <span>design keuzes</span> te
                     komen voor hoe mijn uiteindelijke applicatie eruit komt te zien. Dit prototype
                     is gemaakt met de insteek dat het een <span>'standalone app'</span> wordt. Hiermee heb
                     ik dus geen rekening gehouden met een bestaande huisstijl van The Ce8ion.Lab.
+                </p>
+                <p>
+                    Hai
                 </p>
 
                 <Kringel></Kringel>
@@ -27,6 +33,7 @@
                             eigen oplossing. Door dit onderzoek heb ik een paar
                             <span>functionaliteiten</span> en <span>design keuzes</span> kunnen vaststellen, ook heb ik conclusies kunnen gebruiken
                             in het onderzoek over 'Uiterlijk van grafieken'. <br>
+
                             <i>{{info}}</i>
 
 
@@ -103,7 +110,7 @@
                     <v-flex lg4  order-sm1>
 
                         <div class="imageDiv" v-scroll-reveal>
-                            <img class="image" :src="Dashboard">
+                            <img class="image" :src="surveyLogo">
                             <div class="middle">
                                 <a href="http://i367471.hera.fhict.nl/stageFiles/dashboardresearch.pdf" target="_blank">
 
@@ -123,15 +130,15 @@
                 <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
 
                 <v-layout wrap row>
-                    <v-flex lg4 >
+                    <v-flex lg4>
                         <div class="imageDiv" v-scroll-reveal>
-                            <img class="image" :src="Proto1">
+                            <img class="image" :src="Ontwerp">
                             <div class="middle">
-                                <a href="http://i367471.hera.fhict.nl/stageFiles/graphbaseresearch.pdf" target="_blank">
+                                <a href="http://i367471.hera.fhict.nl/stageFiles/ontwerpproces.pdf" target="_blank">
 
                                     <v-card class="hiddenText">
 
-                                        Bekijk onderzoek
+                                        Bekijk proces
 
                                     </v-card>
                                 </a>
@@ -141,20 +148,32 @@
                     <v-flex lg8>
                         <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Ontwerpfase</span></h3>
                         <p class="onderzoekTekst" v-scroll-reveal>
-                            Na alle onderzoeken had ik al een goed beeld van wat ik wou maken. Ik heb besloten hier <span>schetsen</span> van te maken, hierna heb ik digitale ontwerpen gemaakt in Photoshop. Na hier <span>feedback</span> over gevraagd te hebben, kreeg ik het advies om Adobe XD te gebruiken voor een prototype. Daar ben ik
-                            mee aan de slag gegaan. Het <span>clickable prototype</span> dat hieruit kwam is <a href="https://xd.adobe.com/view/b4490747-9eb8-4ff4-6bf1-f0d0a0f73453-c278/?fullscreen">hier</a> te vinden.
+                            Na alle onderzoeken had ik al een goed beeld van wat ik wou maken. Ik heb besloten hier <span>schetsen</span> van te maken, op deze manier kon ik het idee al vast visualiseren en
+                            kijken wat wel en niet zou werken.
+                            Hierna heb ik <span> digitale ontwerpen</span> gemaakt in Photoshop.
+                            Op deze digitale ontwerpen heb ik feedback gevraagd van de stage begeleiders, zij hebben namelijk voldoende ervaring met het creëren van front-end applicaties.
                             <br><i>klik op de afbeelding om het proces te bekijken</i>
-
-
                         </p>
                     </v-flex>
 
                 </v-layout>
-
                 <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down" v-scroll-reveal >
                 <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
-
                 <v-layout wrap row>
+                    <v-flex lg8>
+                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Prototype</span></h3>
+                        <p class="onderzoekTekst" v-scroll-reveal>
+                            Na over alles <span>feedback</span> gekregen te hebben, kreeg ik het advies om Adobe XD te gebruiken voor een prototype. Daar ben ik
+                            mee aan de slag gegaan. Hieruit is een <span>clickable prototype </span>gekomen waarin ik een aantal <span>a/b testjes</span> doe met het menu en de stijl. Ook hoopte ik met
+                            dit prototype een duidelijker beeld te krijgen over wat wel en niet duidelijk is van het ontwerp. Door het te testen op mensen die wat verstand hadden
+                            van front-end development en grafisch design, hoopte ik ook extra feedback te krijgen over het ontwerp. Aangezien uit een ander onderzoek is gebleken dat ik een
+                            material design library ga gebruiken voor de front-end, is dit prototype ook met de principes van material design gemaakt.
+
+                            <br><i>klik op de afbeelding om het prototype te bekijken</i>
+
+
+                        </p>
+                    </v-flex>
                     <v-flex lg4 >
                         <div class="imageDiv" v-scroll-reveal>
                             <img class="image" :src="Proto1">
@@ -170,20 +189,33 @@
                             </div>
                         </div>
                     </v-flex>
-                    <v-flex lg8>
-                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Prototype</span></h3>
+                </v-layout>
+
+                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down" v-scroll-reveal >
+                <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
+
+                <v-layout wrap row>
+                    <v-flex lg8 order-xs2 order-md2 order-lg1 >
+                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Usertests prototype 1</span></h3>
                         <p class="onderzoekTekst" v-scroll-reveal>
-                           Na over alles <span>feedback</span> gekregen te hebben, kreeg ik het advies om Adobe XD te gebruiken voor een prototype. Daar ben ik
-                            mee aan de slag gegaan. Hieruit is een <span>clickable prototype </span>gekomen waarin ik een aantal <span>a/b testjes</span> doe met het menu en de stijl. Ook hoopte ik met
-                            dit prototype een duidelijker beeld te krijgen over wat wel en niet duidelijk is van het ontwerp. Door het te testen op mensen die wat verstand hadden
-                            van front-end development en grafisch design, hoopte ik ook extra feedback te krijgen over het ontwerp.
+                            Met het prototype wilde ik onderzoeken of de gebruiker  <span>intuïtief</span> met het prototype kan omgaan. Daarbij heb ik een aantal <span>a/b testjes</span> opgesteld om de gebruiker  verschillende manieren te laten zien van filter en stijl. Op deze manier hoopte ik een duidelijk beeld te krijgen over wat een geschikte stijl is voor het dashboard.
 
-                            <br><i>klik op de afbeelding om het prototype te bekijken</i>
-
+                            <i>{{info}}</i>
 
                         </p>
                     </v-flex>
-
+                    <v-flex lg4  order-sm1>
+                        <div class="imageDiv" v-scroll-reveal>
+                            <img class="image" :src="Chart">
+                            <div class="middle">
+                                <a href="http://i367471.hera.fhict.nl/stageFiles/testdocument1.pdf" target="_blank">
+                                    <v-card class="hiddenText">
+                                        Bekijk testdocument
+                                    </v-card>
+                                </a>
+                            </div>
+                        </div>
+                    </v-flex>
                 </v-layout>
             </v-flex>
 
@@ -201,6 +233,8 @@
     import Palet from '../../assets/colorpalette.png'
     import Dashboard from '../../assets/dashboard.jpg'
     import Proto1 from '../../assets/proto1.jpg'
+    import Ontwerp from '../../assets/monitor.jpg'
+    import surveyLogo from '../../assets/surveymonkey-logo.png'
 
 
 
@@ -216,6 +250,8 @@
                 DonutChart: DonutChart,
                 Palet: Palet,
                 Dashboard: Dashboard,
+                Ontwerp: Ontwerp,
+                surveyLogo: surveyLogo,
                 Proto1: Proto1,
                // onderzoek1: onderzoek1,
 
