@@ -8,6 +8,7 @@ export const store = new Vuex.Store({
     state: {
         count: 0,
         scrollPos: 0,
+        researchNr: -1,
     },
     mutations: {
         increment (state) {
@@ -19,6 +20,7 @@ export const store = new Vuex.Store({
     getters : {
         //getState: state => state.counter
         getscrollPos: state => () => state.scrollPos,
+        getresearchNumber: state => () => state.researchNr
 
     }
 })

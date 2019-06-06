@@ -1,5 +1,5 @@
 <template>
-    <div class="text" style="position: relative" ref="kringel1">
+    <div class="text" style="position: relative;   max-height: 200px;" ref="kringel1">
         <img :src="kringel" class="kringel" >
         <div class="fadeKringel" :style="{width: width}"></div>
 
@@ -45,6 +45,7 @@
 <style scoped>
     .kringel {
         max-width: 65%;
+
         display: block;
         margin-left: auto;
         margin-right: auto;

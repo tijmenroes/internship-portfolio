@@ -38,7 +38,27 @@
 
 
     </v-layout>
+
+
     </v-container>
+
+        <v-container fill-height>
+            <v-layout row wrap align-center>
+                <v-flex xs12 md6 >
+                    <div class="imgDiv" >
+                        <!--<video ref="videoRef2" src="" width="70%" muted loop autoplay controls ></video>-->
+                    </div>
+                </v-flex>
+                <v-flex xs12 md5>
+                    <h3 class="text-xs-center" v-scroll-reveal> Individual</h3>
+                    <p v-scroll-reveal="{delay: 100}">
+                        Met het filter kan de gebruiker gemakkelijk filters instellen die over het hele dashboard gelden. Wanneer een filter is aangemaakt, komt deze als een chip tevoorschijn vlak boven het dashboard.
+                        De gebruiker kan dan de filter anders instellen of verwijderen.
+
+                    </p>
+                </v-flex>
+            </v-layout>
+        </v-container>
     </div>
 </template>
 

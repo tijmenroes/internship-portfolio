@@ -25,7 +25,7 @@
                 <v-layout wrap row>
                     <v-flex lg4 >
                     <div class="imageDiv" v-scroll-reveal>
-                        <img class="image" :src="DonutChart">
+                        <img class="image" :src="kleurenPalet">
                         <div class="middle">
                             <a href="http://i367471.hera.fhict.nl/stageFiles/graphbaseresearch.pdf" target="_blank">
 
@@ -96,7 +96,7 @@
                         <p class="onderzoekTekst" v-scroll-reveal>
                             Ik heb het prototype op acht mensen getest, dit waren testpersonen met en zonder verstand van Elocus. Het voornaamste <span>pijnpunt</span> was het niet kunnen vinden
                             van bepaalde knoppen. Vaak hadden de gebruikers deze simpelweg niet gezien, of hadden ze het op een andere plek verwacht. Ze gaven wel aan na het één keer gedaan te hebben, het wel logische plek vonden. Om deze pijnpunten tegen te gaan heb ik een aantal veranderingen gemaakt aan het eindproduct.
-                            <br><i>Klik op de afbeelding om de resultaten te bekijken</i>
+                            <br><i>Klik op de afbeelding om de testresultaten te bekijken</i>
                         </p>
                     </v-flex>
                 </v-layout>
@@ -117,9 +117,9 @@
                         <div class="imageDiv" v-scroll-reveal>
                             <img class="image" :src="Eind">
                             <div class="middle">
-                                <a href="http://i367471.hera.fhict.nl/stageFiles/testdocument2.pdf" target="_blank">
+                                <a href="http://i367471.hera.fhict.nl/reporter/" target="_blank">
                                     <v-card class="hiddenText">
-                                        Bekijk testdocument
+                                        Bekijk demo
                                     </v-card>
                                 </a>
                             </div>
@@ -137,7 +137,7 @@
 
                                     <v-card class="hiddenText">
 
-                                        Bekijk onderzoek
+                                        Bekijk documentatie
 
                                     </v-card>
                                 </a>
@@ -172,7 +172,7 @@
     import Eind from '../../assets/eindproduct.jpg'
 
 
-
+    import kleurenPalet from  '../../assets/kleurenpalet.jpg'
     import Dashboard from '../../assets/dashboard.jpg'
     import Chart from '../../assets/lineChart.png'
     import Plugin from '../../assets/vuePlugins.jpg'
@@ -194,7 +194,7 @@
 
                 Eind: Eind,
                 Docs: Docs,
-
+                kleurenPalet: kleurenPalet,
 
                 Palet: Palet,
 

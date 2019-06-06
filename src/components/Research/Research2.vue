@@ -19,9 +19,7 @@
                     kan ik feedback verkrijgen voordat ik het samenvoeg.
 
                 </p>
-                <p>
-                    ========== Kopske met flowcharts nog ofwa?
-                </p>
+
 
                 <Kringel></Kringel>
                 <!--<dotted_line></dotted_line>-->
@@ -32,7 +30,8 @@
                             <span>Grafieken</span> maken een groot deel van mijn opdracht uit, eerst met het visualiseren van data uit surveys, later uit Google Analytics data.
                             Het is dus de taak om de beste library te kiezen voor mijn project. Na een <span>comparison chart</span> en <span>Proof Of Concepts</span> van verschillende
                             libraries heb ik zelf wat conclusies kunnen trekken. Deze heb ik <span>gepresenteerd</span> aan de stakeholders en hieruit is de library 'eCharts' uit gekomen.
-                            <i>{{info}}</i>
+                            <br>
+                            <i>klik op de afbeelding om het adviesrapport te lezen.</i>
 
 
                         </p>
@@ -46,7 +45,7 @@
 
                                         <v-card class="hiddenText">
 
-                                            Bekijk onderzoek
+                                            Bekijk adviesrapport
 
                                     </v-card>
                                     </a>
@@ -60,13 +59,13 @@
                 <v-layout wrap row>
                     <v-flex lg4 >
                     <div class="imageDiv" v-scroll-reveal>
-                        <img class="image" :src="DonutChart">
+                        <img class="image" :src="Logo">
                         <div class="middle">
                             <a href="http://i367471.hera.fhict.nl/stageFiles/vuerouter_research.pdf" target="_blank">
 
                                 <v-card class="hiddenText">
 
-                                    Bekijk onderzoek
+                                    Bekijk adviesrapport
 
                                 </v-card>
                             </a>
@@ -81,9 +80,7 @@
                             heb ik ook deze functies <span>getest</span> op de testomgeving. Op deze manier kon ik namelijk zien of de voordelen wel gemakkelijk te implementeren zijn of niet.
                             <br>
                             Uit dit onderzoek is een voorstel uit voort gekomen dat we beter de routing van Elocus kunnen gebruiken.
-
-                            <br><i>{{info}}</i>
-
+                            <br><i>klik op de afbeelding om het adviesrapport te lezen.</i>
 
                         </p>
                     </v-flex>
@@ -93,7 +90,7 @@
                 <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
                 <v-layout wrap row>
                     <v-flex lg8 order-xs2 order-md2 order-lg1 >
-                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Supporting libraries</span></h3>
+                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Supporting libraries(ontbreekt)</span></h3>
                         <p class="onderzoekTekst" v-scroll-reveal>
                             Na een <span>best, good and worse practices,</span> en een presentatie waarbij mijn stagebegeleiders en opdrachtgever <span>co-reflectie</span>
                             hebben kunnen geven, ben ik tot een paar belangrijke keuzes gekomen voor mijn concept. Ik heb hier gekeken naar wat voor <span>functionaliteiten</span>
@@ -101,9 +98,7 @@
                             <br>
                             Deze conclusies heb ik kunnen gebruiken bij het maken van het prototype.
 
-
                             <i>{{info}}</i>
-
 
                         </p>
                     </v-flex>
@@ -144,7 +139,7 @@
                         </div>
                     </v-flex>
                     <v-flex lg8>
-                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span> Google analytics</span></h3>
+                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span> Google analytics(ontbreekt)</span></h3>
                         <p class="onderzoekTekst" v-scroll-reveal>
                             Aangezien ik al grafieken had kunnen maken, waar de gebruiker ook wat aanpassingen op kon doen. Leek het ons een goede <span>uitbreiding</span> om dit ook met
                             <span>Google Analytics </span> data te kunnen. Daarom heb ik eerst een onderzoek gedaan naar wat data goed is om te displayen. Aangezien elke klant van The
@@ -158,6 +153,42 @@
                     </v-flex>
 
                 </v-layout>
+                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down flip" v-scroll-reveal >
+                <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
+                <v-layout wrap row>
+                    <v-flex lg8 order-xs2 order-md2 order-lg1 >
+                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Vue testomgeving</span></h3>
+                        <p class="onderzoekTekst" v-scroll-reveal>
+                            Na een <span>best, good and worse practices,</span> en een presentatie waarbij mijn stagebegeleiders en opdrachtgever <span>co-reflectie</span>
+                            hebben kunnen geven, ben ik tot een paar belangrijke keuzes gekomen voor mijn concept. Ik heb hier gekeken naar wat voor <span>functionaliteiten</span>
+                            deze tools hebben en wat voor  <span>keuzes</span> zij maken in het displayen van bepaalde dingen.
+                            <br>
+                            Deze conclusies heb ik kunnen gebruiken bij het maken van het prototype.
+
+
+                            <i>{{info}}</i>
+
+
+                        </p>
+                    </v-flex>
+                    <v-flex lg4  order-sm1>
+
+                        <div class="imageDiv" v-scroll-reveal>
+                            <img class="image" :src="Logo">
+                            <div class="middle">
+                                <a href="http://i367471.hera.fhict.nl/vue-testomgeving/#/tools" target="_blank">
+
+                                    <v-card class="hiddenText">
+
+                                        Bekijk Testomgeving
+
+                                    </v-card>
+                                </a>
+                            </div>
+
+                        </div>
+                    </v-flex>
+                </v-layout>
 
             </v-flex>
             <v-flex lg2 ></v-flex>
@@ -170,10 +201,10 @@
     import dotted from '../../assets/dotted_line.svg'
 
     import galogo from '../../assets/galogoo.png'
-    import Palet from '../../assets/colorpalette.png'
     import Dashboard from '../../assets/dashboard.jpg'
     import Chart from '../../assets/lineChart.png'
     import Plugin from '../../assets/vuePlugins.jpg'
+    import Logo from '../../assets/logo.png'
 
 
 
@@ -188,9 +219,9 @@
                 Chart: Chart,
                 DonutChart: Chart,
                 Plugin: Plugin,
-                Palet: Palet,
                 galogo: galogo,
-                Dashboard: Dashboard
+                Dashboard: Dashboard,
+                Logo: Logo,
                // onderzoek1: onderzoek1,
 
             }

@@ -1,5 +1,6 @@
 <template>
     <div>
+
             <v-layout row>
                 <v-flex xs1 class="hidden-md-and-down"></v-flex>
                 <v-flex xs12>
@@ -8,10 +9,45 @@
             <v-container>
                 <v-layout row wrap >
                     <v-flex xs12 md12 lg4 class="border pa-4" v-for="(item, index) in cards" :key="item.titel"  v-scroll-reveal>
-                        <v-card height="40rem" class="kaart" @mouseenter="changeImg(index)" @click="showResearch(index)"
+
+                        <v-card  height="40rem" v-if="index === $store.state.researchNr" class="kaart selectedCard" @mouseenter="changeImg(index)" @click="showResearch(index)"
+                                 @mouseleave="changeImgBack(index) ">
+                            <v-container fill-height>
+                                <v-layout row wrap>
+
+                                    <div class="text text-xs-center" style="margin: auto;" >
+                                        <img :src="item.src" style="width: 100px; display:block" >
+                                        <div class="fadingEffect"></div>
+                                    </div>
+
+                                    <v-card-text primary-title pt-4 mt-5 ml-3>
+
+                                        <v-layout row wrap>
+                                            <div  class="title">
+                                                <h1 mb-2><span>{{item.hoofdtitel}}</span>{{item.titel}} {{index}} </h1>
+                                                <p class="subtext">
+                                                    {{item.subtext}}
+                                                </p>
+                                                <v-btn depressed flat small class="button text-none text-xs-right">
+                                                    Bekijk het proces
+                                                    <v-icon class="icoon">
+                                                        arrow_right_alt
+                                                    </v-icon>
+                                                </v-btn>
+                                            </div>
+                                        </v-layout>
+                                    </v-card-text>
+                                </v-layout>
+                            </v-container>
+                        </v-card>
+
+
+
+                        <v-card  height="40rem" v-else class="kaart" @mouseenter="changeImg(index)" @click="showResearch(index)"
                                 @mouseleave="changeImgBack(index) ">
                             <v-container fill-height>
                                 <v-layout row wrap>
+
                                         <div class="text text-xs-center" style="margin: auto;" >
                                             <img :src="item.src" style="width: 100px; display:block" >
                                             <div class="fadingEffect"></div>
@@ -21,7 +57,7 @@
 
                                         <v-layout row wrap>
                                             <div  class="title">
-                                                <h1 mb-2><span>{{item.hoofdtitel}}</span>{{item.titel}} </h1>
+                                                <h1 mb-2><span>{{item.hoofdtitel}}</span>{{item.titel}} {{index}} </h1>
                                                 <p class="subtext">
                                                     {{item.subtext}}
                                                 </p>
@@ -49,17 +85,42 @@
                 </v-flex>
                 <v-flex xs1 class="hidden-md-and-down"></v-flex>
             </v-layout>
+
         <div ref="research"></div>
-        <div v-if="researchnr === 0" class="conclusies" >
-                     <h1 class="text-xs-center hoofdvraag">Hoe visualiseer ik data op de juiste manier?</h1>
+        <div v-if="$store.state.researchNr === 0" class="conclusies" >
+            <v-layout row wrap>
+            <v-flex xs1 class="hidden-md-and-down"></v-flex>
+                <v-flex xs12>
+ <v-container>
+            <h1 class="text-xs-center hoofdvraag pa-4">{{cards[0].hoofdtitel +  cards[0].titel}}</h1>
+ </v-container>
+                </v-flex>
+                <v-flex xs1 class="hidden-md-and-down"></v-flex>
+            </v-layout>
             <Research1></Research1>
         </div>
-        <div v-else-if="researchnr === 1" class="conclusies" >
-            <h1 class="text-xs-center hoofdvraag">Hoe kom ik erachter wat de juiste tools zijn?</h1>
+        <div v-else-if="$store.state.researchNr === 1" class="conclusies" >
+            <v-layout row wrap>
+                <v-flex xs1 class="hidden-md-and-down"></v-flex>
+                <v-flex xs12>
+                    <v-container>
+                        <h1 class="text-xs-center hoofdvraag pa-4">{{cards[1].hoofdtitel +  cards[1].titel}}</h1>
+                    </v-container>
+                </v-flex>
+                <v-flex xs1 class="hidden-md-and-down"></v-flex>
+            </v-layout>
             <Research2></Research2>
         </div>
-        <div v-else-if="researchnr === 2" class="conclusies" >
-            <h1 class="text-xs-center hoofdvraag">Hoe verbeter ik mijn oude ontwerp?</h1>
+        <div v-else-if="$store.state.researchNr === 2" class="conclusies" >
+            <v-layout row wrap>
+                <v-flex xs1 class="hidden-md-and-down"></v-flex>
+                <v-flex xs12>
+                    <v-container>
+                        <h1 class="text-xs-center hoofdvraag pa-4">{{cards[2].hoofdtitel +  cards[2].titel}}</h1>
+                    </v-container>
+                </v-flex>
+                <v-flex xs1 class="hidden-md-and-down"></v-flex>
+            </v-layout>
             <Research3></Research3>
         </div>
     </div>
@@ -78,19 +139,13 @@
     import Code1 from "../assets/redCode.png"
     import Code2 from "../assets/whiteCode.png"
     export default {
-        props: ["researchnr"],
+        props: ["researchNumber"],
         components:{
             Research1, Research2, Research3
         },
-        watch: {
-            researchnr(){
-              console.log('yikes');
-                this.$vuetify.goTo(this.$refs.research, this.options);
-          }
-        },
         methods:{
             showResearch(index){
-                this.researchnr = index;
+                this.$store.state.researchNr = index;
                 // this.$vuetify.goTo(this.$refs.research, this.options);
             },
             changeImg(index){
@@ -107,6 +162,7 @@
                 width: '100%',
                 kringel: kringel,
                 imgRef: image2,
+                researchnr: -1,
                 imgRef2: image,
                 imgRefOG: image2,
                 options: [{
@@ -126,7 +182,18 @@
                 ]
             }
         },
+        computed: {
+          researchNumber(){
 
+              this.researchnr = this.researchNumber;
+              return this.researchnr
+          }
+        }, mounted() {
+            this.$store.watch(this.$store.getters.getresearchNumber, researchnr =>{
+                this.$vuetify.goTo(this.$refs.research, this.options);
+            })
+
+        }
     }
 </script>
 
@@ -199,6 +266,9 @@
     }
     .icoon {
         color: #ff4c42
+    }
+    .selectedCard {
+        border: 0.15rem solid #ff4c42;
     }
     .title {
         margin-top: 100px;

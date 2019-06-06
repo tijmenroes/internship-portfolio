@@ -6,6 +6,7 @@
         <li> <div class="menuItem" @click="scrollTo(2)" :style="{background: menuItems[1]}"></div></li>
         <li> <div class="menuItem" @click="scrollTo(3)" :style="{background: menuItems[2]}"></div></li>
         <li> <div class="menuItem" @click="scrollTo(4)" :style="{background: menuItems[3]}"></div></li>
+        <li> <div class="menuItem" @click="scrollTo(5)" :style="{background: menuItems[4]}"></div></li>
       </ul>
     </div>
     <div class="lgdiv" >
@@ -44,7 +45,9 @@
       <OpdrachtDesc></OpdrachtDesc>
     <div class="bigdiv">
       <h1 class="text-xs-center titel" ref="page3">Onderzoek </h1>
-      <starter :researchnr="researchnr"> </starter>
+      <keep-alive>
+      <starter :researchNumber="researchNumber"> </starter>
+      </keep-alive>
       <Kringel ></Kringel>
       <!--Features pagina-->
       <v-container>
@@ -58,13 +61,13 @@
         </v-layout>
 
       </v-container>
-
-    </div>
-    <div class="bigdiv greydiv">
-
       <Kringel ></Kringel>
-    <h1 class="text-xs-center titel">Reflectie</h1>
+    </div>
 
+    <div class="reddiv">
+
+
+      <h1 class="text-xs-center reflectieTitel pa-5" ref="page5">Resultaten</h1>
       <reflectie></reflectie>
       <!--<Kringeltje :scrollPos="scrollPos"></Kringeltje>-->
     </div>
@@ -92,14 +95,14 @@ export default {
    return {
      Background: Background,
 
-     researchnr: -1,
+     researchNumber: -1,
      width: '100%',
      kringel: kringel,
      cursor: 'url(' + Cursor + ')',
      cursorlit: Cursor,
      mockup: mockup,
      scrollPos: 0,
-     menuItems: ['red','white','white', 'white'],
+     menuItems: ['red','white','white', 'white', 'white'],
      location: 0,
      options: [{
        duration: 300,
@@ -132,7 +135,8 @@ export default {
 
       }else if( number ===4 ){
         this.$vuetify.goTo(this.$refs.page4, this.options);
-
+      }else if( number ===5 ){
+        this.$vuetify.goTo(this.$refs.page5, this.options);
       }
 
     },
@@ -144,16 +148,20 @@ export default {
       var page1 = this.$refs.page1;
       var page3 = this.$refs.page3;
       var page4 = this.$refs.page4;
+      var page5 = this.$refs.page5;
+      const distance = 500;
 
-      if(this.scrollPos > page1.offsetTop + page1.offsetHeight  && this.scrollPos < page2.offsetTop + page2.offsetHeight -300 ) {
+      if(this.scrollPos < page2.offsetTop + page2.offsetHeight -distance ) {
         this.location = 0;
       }
-      else if(this.scrollPos > page2.offsetTop -300 + page2.offsetHeight && this.scrollPos < page3.offsetTop + page3.offsetHeight -300) {
+      else if(this.scrollPos > page2.offsetTop - distance + page2.offsetHeight && this.scrollPos < page3.offsetTop + page3.offsetHeight -distance) {
         this.location = 1;
-      } else if(this.scrollPos > page3.offsetTop + page3.offsetHeight -300 && this.scrollPos < page4.offsetTop + page4.offsetHeight -300) {
+      } else if(this.scrollPos > page3.offsetTop + page3.offsetHeight -distance && this.scrollPos < page4.offsetTop + page4.offsetHeight -distance) {
         this.location = 2;
-      }  else if(this.scrollPos > page4.offsetTop + page4.offsetHeight -300 ) {
+      }  else if(this.scrollPos > page4.offsetTop + page4.offsetHeight -800 && this.scrollPos < page5.offsetTop + page5.offsetHeight -800 ) {
         this.location = 3;
+      } else {
+        this.location = 4;
       }
     },
     changeMenu(index){
@@ -173,18 +181,17 @@ export default {
   },
   mounted(){
     const param =  this.$route.params.id;
-    console.log(param);
     if(param === "research"){
       this.scrollTo(3);
     } else if(param === "research1"){
       this.scrollTo(3);
-      this.researchnr = 0;
+      this.$store.state.researchNr = 0;
     } else if(param === "research2"){
       this.scrollTo(3);
-      this.researchnr = 1;
+      this.$store.state.researchNr = 1;
     } else if(param === "research3"){
       this.scrollTo(3);
-      this.researchnr = 2;
+      this.$store.state.researchNr = 2;
     }
   },
   beforeMount(){
@@ -213,6 +220,10 @@ export default {
 .titel {
   font-weight: bold;
   color: #FF4C42;
+}
+.reflectieTitel {
+  font-weight: bold;
+  color: white;
 }
 .bigdiv {
     min-height: 1000px;
@@ -263,8 +274,8 @@ export default {
     box-shadow: 0px 6px 18px 2px rgba(0,0,0,0.24);
   }
 
-  .greydiv {
-    background-color: #F9F9F9;
+  .reddiv {
+    background-color: #ff4c42;
   }
 </style>
 

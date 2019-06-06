@@ -8,22 +8,18 @@
                 <h3 class="subvraag">
                     Waarom een prototype?
                 </h3>
-
-                <p>
-
-                </p>
+                <!--<p>-->
+                    <!--Ik wou een proto-->
+                <!--</p>-->
                 <p>
                     Ik heb dit <span>eerste prototype</span> gemaakt om achter belangrijke <span>design keuzes</span> te
                     komen voor hoe mijn uiteindelijke applicatie eruit komt te zien. Dit prototype
                     is gemaakt met de insteek dat het een <span>'standalone app'</span> wordt. Hiermee heb
                     ik dus geen rekening gehouden met een bestaande huisstijl van The Ce8ion.Lab.
                 </p>
-                <p>
-                    Hai
-                </p>
 
                 <Kringel></Kringel>
-                <!--<dotted_line></dotted_line>-->
+
                 <v-layout wrap row>
                     <v-flex lg8 order-xs2 order-md2 order-lg1 >
                         <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Bestaande data dashboards</span></h3>
@@ -33,14 +29,10 @@
                             eigen oplossing. Door dit onderzoek heb ik een paar
                             <span>functionaliteiten</span> en <span>design keuzes</span> kunnen vaststellen, ook heb ik conclusies kunnen gebruiken
                             in het onderzoek over 'Uiterlijk van grafieken'. <br>
-
                             <i>{{info}}</i>
-
-
                         </p>
                     </v-flex>
                     <v-flex lg4  order-sm1>
-
                         <div class="imageDiv" v-scroll-reveal>
                           <img class="image" :src="Dashboard">
                                 <div class="middle">
@@ -53,7 +45,6 @@
                                     </v-card>
                                     </a>
                                 </div>
-
                         </div>
                     </v-flex>
                 </v-layout>
@@ -65,11 +56,8 @@
                         <img class="image" :src="DonutChart">
                         <div class="middle">
                             <a href="http://i367471.hera.fhict.nl/stageFiles/graphbaseresearch.pdf" target="_blank">
-
-                                <v-card class="hiddenText">
-
+                               <v-card class="hiddenText">
                                     Bekijk onderzoek
-
                                 </v-card>
                             </a>
                         </div>
@@ -83,11 +71,8 @@
                             aantal conclusies kunnen trekken die ik kan gebruiken om de basis van de grafieken op te bouwen. Hoe de grafieken er uiteindelijk uit
                             gaan zien is nog afhankelijk van de library en de data die ik aangeleverd krijg.
                             <br><i>{{info}}</i>
-
-
                         </p>
                     </v-flex>
-
                 </v-layout>
                 <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down" v-scroll-reveal >
                 <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
@@ -100,11 +85,7 @@
                             deze tools hebben en wat voor  <span>keuzes</span> zij maken in het displayen van bepaalde dingen.
                             <br>
                             Deze conclusies heb ik kunnen gebruiken bij het maken van het prototype.
-
-
                             <i>{{info}}</i>
-
-
                         </p>
                     </v-flex>
                     <v-flex lg4  order-sm1>
@@ -112,23 +93,17 @@
                         <div class="imageDiv" v-scroll-reveal>
                             <img class="image" :src="surveyLogo">
                             <div class="middle">
-                                <a href="http://i367471.hera.fhict.nl/stageFiles/dashboardresearch.pdf" target="_blank">
-
+                                <a href="http://i367471.hera.fhict.nl/stageFiles/surveytool_research.pdf" target="_blank">
                                     <v-card class="hiddenText">
-
                                         Bekijk onderzoek
-
                                     </v-card>
                                 </a>
                             </div>
-
                         </div>
                     </v-flex>
                 </v-layout>
-
                 <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down flip" v-scroll-reveal >
                 <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
-
                 <v-layout wrap row>
                     <v-flex lg4>
                         <div class="imageDiv" v-scroll-reveal>
@@ -168,10 +143,7 @@
                             dit prototype een duidelijker beeld te krijgen over wat wel en niet duidelijk is van het ontwerp. Door het te testen op mensen die wat verstand hadden
                             van front-end development en grafisch design, hoopte ik ook extra feedback te krijgen over het ontwerp. Aangezien uit een ander onderzoek is gebleken dat ik een
                             material design library ga gebruiken voor de front-end, is dit prototype ook met de principes van material design gemaakt.
-
                             <br><i>klik op de afbeelding om het prototype te bekijken</i>
-
-
                         </p>
                     </v-flex>
                     <v-flex lg4 >
@@ -191,36 +163,32 @@
                     </v-flex>
                 </v-layout>
 
-                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down" v-scroll-reveal >
+                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down flip" v-scroll-reveal >
                 <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
 
                 <v-layout wrap row>
+                    <v-flex lg4  order-sm1>
+                    <div class="imageDiv" v-scroll-reveal>
+                        <img class="image" :src="Proto1">
+                        <div class="middle">
+                            <a href="http://i367471.hera.fhict.nl/stageFiles/testdocument1.pdf" target="_blank">
+                                <v-card class="hiddenText">
+                                    Bekijk testdocument
+                                </v-card>
+                            </a>
+                        </div>
+                    </div>
+                </v-flex>
                     <v-flex lg8 order-xs2 order-md2 order-lg1 >
                         <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Usertests prototype 1</span></h3>
                         <p class="onderzoekTekst" v-scroll-reveal>
                             Met het prototype wilde ik onderzoeken of de gebruiker  <span>intuïtief</span> met het prototype kan omgaan. Daarbij heb ik een aantal <span>a/b testjes</span> opgesteld om de gebruiker  verschillende manieren te laten zien van filter en stijl. Op deze manier hoopte ik een duidelijk beeld te krijgen over wat een geschikte stijl is voor het dashboard.
-
                             <i>{{info}}</i>
-
                         </p>
-                    </v-flex>
-                    <v-flex lg4  order-sm1>
-                        <div class="imageDiv" v-scroll-reveal>
-                            <img class="image" :src="Chart">
-                            <div class="middle">
-                                <a href="http://i367471.hera.fhict.nl/stageFiles/testdocument1.pdf" target="_blank">
-                                    <v-card class="hiddenText">
-                                        Bekijk testdocument
-                                    </v-card>
-                                </a>
-                            </div>
-                        </div>
                     </v-flex>
                 </v-layout>
             </v-flex>
-
             <v-flex lg2 ></v-flex>
-
         </v-layout>
     </v-container>
 </template>
@@ -228,16 +196,13 @@
 <script>
     import Arrow from '../../assets/Arrow.svg'
     import Dotted from '../../assets/dotted_line.svg'
-    import PieChart from '../../assets/pieChart.png'
+
     import DonutChart from '../../assets/donutChart.jpg'
-    import Palet from '../../assets/colorpalette.png'
+
     import Dashboard from '../../assets/dashboard.jpg'
     import Proto1 from '../../assets/proto1.jpg'
     import Ontwerp from '../../assets/monitor.jpg'
     import surveyLogo from '../../assets/surveymonkey-logo.png'
-
-
-
 
     export default {
 
@@ -246,16 +211,12 @@
                 info: "klik op de afbeelding om het onderzoek te lezen.",
                 Arrow: Arrow,
                 Dotted:Dotted,
-                PieChart: PieChart,
                 DonutChart: DonutChart,
-                Palet: Palet,
                 Dashboard: Dashboard,
                 Ontwerp: Ontwerp,
                 surveyLogo: surveyLogo,
                 Proto1: Proto1,
-               // onderzoek1: onderzoek1,
-
-            }
+             }
         }
     }
 </script>
@@ -303,16 +264,11 @@
         font-size: 16px;
         padding: 16px 32px;
     }
-    .subvraagNummer {
-        margin-bottom: -2px;
-    }
     .subvraag {
         padding: 0;
     }
     .arrow {
         width:70%;
-        /*padding-top:2%;*/
-        /*padding-bottom:2%;*/
         padding-left:26%
     }
     .middle {
