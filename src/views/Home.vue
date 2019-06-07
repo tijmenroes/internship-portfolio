@@ -44,7 +44,7 @@
     <!--Opdracht omschrijving en aanpak-->
       <OpdrachtDesc></OpdrachtDesc>
     <div class="bigdiv">
-      <h1 class="text-xs-center titel" ref="page3">Onderzoek </h1>
+      <h1 class="text-xs-center titel" ref="page3">Producten </h1>
       <keep-alive>
       <starter :researchNumber="researchNumber"> </starter>
       </keep-alive>

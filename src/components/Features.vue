@@ -41,7 +41,7 @@
 
 
     </v-container>
-
+        <img :src="Arrow" class="arrow text-xs-center" v-scroll-reveal>
         <v-container fill-height>
             <v-layout row wrap align-center>
                 <v-flex xs12 md6 >

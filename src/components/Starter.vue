@@ -24,7 +24,7 @@
 
                                         <v-layout row wrap>
                                             <div  class="title">
-                                                <h1 mb-2><span>{{item.hoofdtitel}}</span>{{item.titel}} {{index}} </h1>
+                                                <h1 mb-2><span>{{item.hoofdtitel}}</span>{{item.titel}} </h1>
                                                 <p class="subtext">
                                                     {{item.subtext}}
                                                 </p>
@@ -57,7 +57,7 @@
 
                                         <v-layout row wrap>
                                             <div  class="title">
-                                                <h1 mb-2><span>{{item.hoofdtitel}}</span>{{item.titel}} {{index}} </h1>
+                                                <h1 mb-2><span>{{item.hoofdtitel}}</span>{{item.titel}}  </h1>
                                                 <p class="subtext">
                                                     {{item.subtext}}
                                                 </p>
@@ -268,7 +268,7 @@
         color: #ff4c42
     }
     .selectedCard {
-        border: 0.15rem solid #ff4c42;
+        border: 0.07rem solid rgba(0,0,0, 0.4);
     }
     .title {
         margin-top: 100px;

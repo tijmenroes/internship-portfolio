@@ -20,32 +20,33 @@
 
 
                 <Kringel></Kringel>
-
-
                 <v-layout wrap row>
                     <v-flex lg4 >
-                    <div class="imageDiv" v-scroll-reveal>
-                        <img class="image" :src="kleurenPalet">
-                        <div class="middle">
-                            <a href="http://i367471.hera.fhict.nl/stageFiles/graphbaseresearch.pdf" target="_blank">
+                        <div class="imageDiv" v-scroll-reveal>
+                            <img class="image" :src="proto2Proces">
+                            <div class="middle">
+                                <a href="http://i367471.hera.fhict.nl/stageFiles/prototype2_proces.pdf" target="_blank">
 
-                                <v-card class="hiddenText">
+                                    <v-card class="hiddenText">
 
-                                    Bekijk onderzoeksproces
+                                        Bekijk ontwerpproces
 
-                                </v-card>
-                            </a>
+                                    </v-card>
+                                </a>
+                            </div>
                         </div>
-                    </div>
                     </v-flex>
                     <v-flex lg8>
-                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span> Vernieuwd kleurenpalet</span></h3>
+                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span> Proces prototype 2</span></h3>
                         <p class="onderzoekTekst" v-scroll-reveal>
-                            Aangezien het eindproduct op Elocus komt te staan, was er een nieuw <span>kleurenpalet</span> nodig. Samen met een paar grafische experts van The Cre8ion.Lab, zijn wij gaan kijken naar inspiratie online, hierna heb ik met wat online tools een kleurenpalet kunnen samenstellen. Na wat iteraties, is deze ook goedgekeurd door de grafische afdeling, en komt deze nu meer overeen met de stijl van Elocus.
-                            <br><i>{{info}}</i>
+                            Ik heb het prototype op acht mensen getest, dit waren testpersonen met en zonder verstand van Elocus. Het voornaamste <span>pijnpunt</span> was het niet kunnen vinden
+                            van bepaalde knoppen. Vaak hadden de gebruikers deze simpelweg niet gezien, of hadden ze het op een andere plek verwacht. Ze gaven wel aan na het één keer gedaan te hebben, het wel logische plek vonden. Om deze pijnpunten tegen te gaan heb ik een aantal veranderingen gemaakt aan het eindproduct.
+                            <br><i>Klik op de afbeelding om het proces tot het prototype te bekijken</i>
                         </p>
                     </v-flex>
                 </v-layout>
+
+
                 <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down" v-scroll-reveal >
                 <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
                 <v-layout wrap row>
@@ -103,6 +104,33 @@
                 <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down" v-scroll-reveal >
                 <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
                 <v-layout wrap row>
+                    <v-flex lg8>
+                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span> Vernieuwd kleurenpalet</span></h3>
+                        <p class="onderzoekTekst" v-scroll-reveal>
+                            Aangezien het eindproduct op Elocus komt te staan, was er een nieuw <span>kleurenpalet</span> nodig. Samen met een paar grafische experts van The Cre8ion.Lab, zijn wij gaan kijken naar inspiratie online, hierna heb ik met wat online tools een kleurenpalet kunnen samenstellen. Na wat iteraties, is deze ook goedgekeurd door de grafische afdeling, en komt deze nu meer overeen met de stijl van Elocus.
+                            <br><i>{{info}}</i>
+                        </p>
+                    </v-flex>
+                    <v-flex lg4 order-sm1>
+                        <div class="imageDiv" v-scroll-reveal>
+                            <img class="image" :src="kleurenPalet">
+                            <div class="middle">
+                                <a href="http://i367471.hera.fhict.nl/stageFiles/graphbaseresearch.pdf" target="_blank">
+
+                                    <v-card class="hiddenText">
+
+                                        Bekijk onderzoeksproces
+
+                                    </v-card>
+                                </a>
+                            </div>
+                        </div>
+                    </v-flex>
+                </v-layout>
+                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down" v-scroll-reveal >
+                <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
+
+                <v-layout wrap row>
                     <v-flex lg8 order-xs2 order-md2 order-lg1 >
                         <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Eindproduct  </span></h3>
                         <p class="onderzoekTekst" v-scroll-reveal>
@@ -125,6 +153,34 @@
                             </div>
                         </div>
                     </v-flex>
+                </v-layout>
+                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down flip" v-scroll-reveal >
+                <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
+
+                <v-layout wrap row>
+                    <v-flex lg4 >
+                        <div class="imageDiv" v-scroll-reveal>
+                            <img class="image" :src="mockup">
+                            <div class="middle">
+                                <a href="http://i367471.hera.fhict.nl/documentation/docs/install.html" target="_blank">
+
+                                    <v-card class="hiddenText">
+
+                                        Bekijk documentatie
+
+                                    </v-card>
+                                </a>
+                            </div>
+                        </div>
+                    </v-flex>
+                    <v-flex lg8>
+                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span> Testen</span></h3>
+                        <p class="onderzoekTekst" v-scroll-reveal>
+                            Om het overhandigen van mijn product wat vlotter te laten verlopen heb ik <span>documentatie</span> geschreven voor mijn eindproduct. Hierbij heb ik vooral naar de belangrijkste aspecten van mijn applicatie gekeken, dit zijn de onderdelen die zij misschien later moeten gaan aanpassen. Zoals bijvoorbeeld wanneer de API is veranderd.
+                            <br><i>Klik op de afbeelding om de documentatie te bekijken.</i>
+                        </p>
+                    </v-flex>
+
                 </v-layout>
                 <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down flip" v-scroll-reveal >
                 <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
@@ -171,17 +227,15 @@
     import Proto2 from '../../assets/prototype2ss.jpg'
     import Eind from '../../assets/eindproduct.jpg'
 
-
+    import proto2Proces from '../../assets/proto2procesje.jpg'
     import kleurenPalet from  '../../assets/kleurenpalet.jpg'
     import Dashboard from '../../assets/dashboard.jpg'
     import Chart from '../../assets/lineChart.png'
     import Plugin from '../../assets/vuePlugins.jpg'
 
-
-
+    import mockup from "../../assets/mockups.png"
 
     export default {
-
         data(){
             return {
                 info: "klik op de afbeelding om het onderzoek te lezen.",
@@ -192,6 +246,8 @@
                 Proto2: Proto2,
                 Plugin: Plugin,
 
+                mockup: mockup,
+                proto2Proces: proto2Proces,
                 Eind: Eind,
                 Docs: Docs,
                 kleurenPalet: kleurenPalet,
