@@ -169,7 +169,7 @@
                 <v-layout wrap row>
                     <v-flex lg4  order-sm1>
                     <div class="imageDiv" v-scroll-reveal>
-                        <img class="image" :src="Proto1">
+                        <img class="image" :src="Usertest1">
                         <div class="middle">
                             <a href="http://i367471.hera.fhict.nl/stageFiles/testdocument1.pdf" target="_blank">
                                 <v-card class="hiddenText">
@@ -204,6 +204,8 @@
     import Ontwerp from '../../assets/monitor.jpg'
     import surveyLogo from '../../assets/surveymonkey-logo.png'
 
+    import Usertest1 from '../../assets/usertest1.jpg'
+
     export default {
 
         data(){
@@ -216,6 +218,7 @@
                 Ontwerp: Ontwerp,
                 surveyLogo: surveyLogo,
                 Proto1: Proto1,
+                Usertest1: Usertest1
              }
         }
     }

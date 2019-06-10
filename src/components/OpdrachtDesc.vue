@@ -83,6 +83,7 @@
 
 }
 .schuin {
+    margin-top: -1px;
     min-height: 50px;
     background-color: #ff4c42;
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 3%);

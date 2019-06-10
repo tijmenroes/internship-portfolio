@@ -41,7 +41,7 @@
                         <div class="imageDiv" v-scroll-reveal>
                           <img class="image" :src="Chart">
                                 <div class="middle">
-                                    <a href="http://i367471.hera.fhict.nl/stageFiles/dashboardresearch.pdf" target="_blank">
+                                    <a href="http://i367471.hera.fhict.nl/stageFiles/chartlibrary_research.pdf" target="_blank">
 
                                         <v-card class="hiddenText">
 

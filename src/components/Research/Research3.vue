@@ -79,7 +79,7 @@
                 <v-layout wrap row>
                     <v-flex lg4 >
                         <div class="imageDiv" v-scroll-reveal>
-                            <img class="image" :src="DonutChart">
+                            <img class="image" :src="Usertest2">
                             <div class="middle">
                                 <a href="http://i367471.hera.fhict.nl/stageFiles/prototype_testdocument2.pdf" target="_blank">
 
@@ -127,20 +127,11 @@
                         </div>
                     </v-flex>
                 </v-layout>
-                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down" v-scroll-reveal >
+                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down flip" v-scroll-reveal >
                 <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
 
                 <v-layout wrap row>
-                    <v-flex lg8 order-xs2 order-md2 order-lg1 >
-                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Eindproduct  </span></h3>
-                        <p class="onderzoekTekst" v-scroll-reveal>
 
-                            Alle voorgaande stappen hebben uiteindelijk tot het <span>eindproduct</span> geleid. In dit eindproduct is het mogelijk om een dashboard zo in te stellen
-                            als je wilt. Mijn oplossing werkt als je kijkt naar de tijd die het nodig heeft, sneller dan bekende oplossingen zoals "SurveyMonkey" of "Survio". Voor veiligheidsredenen heb ik alleen een demo online gezet, hierin is het enige verschil dat de data niet uit een API komt, maar vooraf geset wordt.
-                            <br>
-                            <i>Klik op de afbeelding om de demo te bekijken</i>
-                        </p>
-                    </v-flex>
                     <v-flex lg4  order-sm1>
                         <div class="imageDiv" v-scroll-reveal>
                             <img class="image" :src="Eind">
@@ -153,11 +144,30 @@
                             </div>
                         </div>
                     </v-flex>
+
+                    <v-flex lg8 order-xs2 order-md2 order-lg1 >
+                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span>Eindproduct  </span></h3>
+                        <p class="onderzoekTekst" v-scroll-reveal>
+
+                            Alle voorgaande stappen hebben uiteindelijk tot het <span>eindproduct</span> geleid. In dit eindproduct is het mogelijk om een dashboard zo in te stellen
+                            als je wilt. Mijn oplossing werkt als je kijkt naar de tijd die het nodig heeft, sneller dan bekende oplossingen zoals "SurveyMonkey" of "Survio". Voor veiligheidsredenen heb ik alleen een demo online gezet, hierin is het enige verschil dat de data niet uit een API komt, maar vooraf geset wordt.
+                            <br>
+                            <i>Klik op de afbeelding om de demo te bekijken</i>
+                        </p>
+                    </v-flex>
                 </v-layout>
-                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down flip" v-scroll-reveal >
+                <img :src="Arrow" class="arrow text-xs-center hidden-md-and-down" v-scroll-reveal >
                 <img :src="Dotted" class="arrow text-xs-center hidden-lg-and-up" v-scroll-reveal >
 
                 <v-layout wrap row>
+
+                    <v-flex lg8>
+                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span> Testen</span></h3>
+                        <p class="onderzoekTekst" v-scroll-reveal>
+                            Om het overhandigen van mijn product wat vlotter te laten verlopen heb ik <span>documentatie</span> geschreven voor mijn eindproduct. Hierbij heb ik vooral naar de belangrijkste aspecten van mijn applicatie gekeken, dit zijn de onderdelen die zij misschien later moeten gaan aanpassen. Zoals bijvoorbeeld wanneer de API is veranderd.
+                            <br><i>Klik op de afbeelding om het testrapport te bekijken.</i>
+                        </p>
+                    </v-flex>
                     <v-flex lg4 >
                         <div class="imageDiv" v-scroll-reveal>
                             <img class="image" :src="mockup">
@@ -166,19 +176,12 @@
 
                                     <v-card class="hiddenText">
 
-                                        Bekijk documentatie
+                                        Bekijk testrapport
 
                                     </v-card>
                                 </a>
                             </div>
                         </div>
-                    </v-flex>
-                    <v-flex lg8>
-                        <h3 class="text-xs-center pa-3" v-scroll-reveal><span> Testen</span></h3>
-                        <p class="onderzoekTekst" v-scroll-reveal>
-                            Om het overhandigen van mijn product wat vlotter te laten verlopen heb ik <span>documentatie</span> geschreven voor mijn eindproduct. Hierbij heb ik vooral naar de belangrijkste aspecten van mijn applicatie gekeken, dit zijn de onderdelen die zij misschien later moeten gaan aanpassen. Zoals bijvoorbeeld wanneer de API is veranderd.
-                            <br><i>Klik op de afbeelding om de documentatie te bekijken.</i>
-                        </p>
                     </v-flex>
 
                 </v-layout>
@@ -232,6 +235,7 @@
     import Dashboard from '../../assets/dashboard.jpg'
     import Chart from '../../assets/lineChart.png'
     import Plugin from '../../assets/vuePlugins.jpg'
+    import Usertest2 from '../../assets/usertest2.jpg'
 
     import mockup from "../../assets/mockups.png"
 
@@ -245,6 +249,7 @@
                 DonutChart: Chart,
                 Proto2: Proto2,
                 Plugin: Plugin,
+                Usertest2: Usertest2,
 
                 mockup: mockup,
                 proto2Proces: proto2Proces,

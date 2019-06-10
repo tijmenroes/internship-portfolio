@@ -16,8 +16,9 @@
              <v-container>
               <h1 class="superTitel" ref="page1">Reporting</h1>
              <p>
-               Tijdens mijn stage periode bij The Cre8ion.Lab, heb ik een reporting tool ontwikkeld die data uit formulieren visualiseert. Op deze manier wordt de data niet simpelweg
-               als een lijst gedisplayd, maar worden ze ook omgezet naar grafieken. Op deze manier heeft de gebruiker meteen een overzicht van de data.
+              Hoi! Ik ben Tijmen een student van Fontys ICT-media design. Deze site laat het proces zien van mijn stage bij The Cre8ion.Lab.
+                 Hier heb ik een data dashboard ontwikkeld die data uit formulieren visualiseert. Op deze manier wordt de data niet simpelweg
+               als een lijst gedisplayd, maar worden ze ook omgezet naar grafieken. Zo heeft de gebruiker meteen een overzicht van de data.
                <br>
                <a @click="testeroonie" >
                  <v-card class="hiddenText">

@@ -31,7 +31,7 @@
         </v-flex>
         <v-flex xs12 md6>
             <div class="imgDiv" >
-                <!--<img :src="Knipsel" alt="" style="float:right;">-->
+
                 <video ref="videoRef" src="" style="float:right;" width="70%" muted loop autoplay controls ></video>
             </div>
         </v-flex>
@@ -41,7 +41,7 @@
 
 
     </v-container>
-        <img :src="Arrow" class="arrow text-xs-center" v-scroll-reveal>
+        <img :src="Arrow" class="arrow text-xs-center flip" v-scroll-reveal>
         <v-container fill-height>
             <v-layout row wrap align-center>
                 <v-flex xs12 md6 >
@@ -63,18 +63,16 @@
 </template>
 
 <script>
-    import Arrow from "../assets/Arrow.svg"
-    import Knipsel from "../assets/knipseltest.jpg"
+
+    import Arrow from '../assets/Arrow.svg'
 
     export default {
-
         data(){
-            return {
-                Arrow: Arrow,
-                Knipsel: Knipsel,
-
-            }
-        }, mounted(){
+          return {
+              Arrow: Arrow
+          }
+        },
+       mounted(){
             this.$refs.videoRef.src = "http://i367471.hera.fhict.nl/stageFiles/chartedit.mp4";
             this.$refs.videoRef2.src = "http://i367471.hera.fhict.nl/stageFiles/chartedit.mp4";
         }
@@ -82,8 +80,19 @@
 </script>
 
 <style scoped>
+    .flip{
+        -moz-transform: scaleX(-1) !important;
+        -o-transform: scaleX(-1) !important;;
+        -webkit-transform: scaleX(-1) !important;;
+        transform: scaleX(-1) !important;;
+        filter: FlipH;
+        padding-left: 0% !important;
+        padding-right: 26%;
+        -ms-filter: "FlipH";
+    }
+
 img {
-    width: 80%;
+    width: 75%;
     padding: 5%;
     }
     .arrow {
